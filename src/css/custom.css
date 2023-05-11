@@ -1,0 +1,163 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #4520e6;
+  --ifm-color-primary-dark: #210d77;
+  --ifm-color-primary-darker: #210d77;
+  --ifm-color-primary-darkest: #210d77;
+  --ifm-color-primary-light: #6547eb;
+  --ifm-color-primary-lighter: #dad1fe;
+  --ifm-color-primary-lightest: #f0edfd;
+  --ifm-code-font-size: 95%;
+  --ifm-footer-background-color: #ffffff;
+  --ifm-footer-color: #7d8a9d;
+  --ifm-toc-border-color: #e5e7eb;
+  --ifm-color-emphasis-200: #e5e7eb;
+  --ifm-color-gray-800: #e5e7eb;
+  --ifm-background-color: #ffffff;
+  --ifm-footer-title-color: #202327;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --band-neutral-000: #ffffff;
+  --band-neutral-100: #f3f4f6;
+  --band-neutral-200: #e5e7eb;
+  --band-neutral-300: #d1d5db;
+  --band-neutral-400: #b0b6bf;
+  --band-neutral-500: #9096a2;
+  --band-neutral-600: #6c7889;
+  --band-neutral-700: #4a5568;
+  --band-neutral-800: #323a43;
+  --band-neutral-900: #202327;
+  --ifm-tabs-padding-vertical: 10px;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #8871ef;
+  --ifm-color-primary-dark: #3214b8;
+  --ifm-color-primary-darker: #1d0d63;
+  --ifm-color-primary-darkest: #120a38;
+  --ifm-color-primary-light: #b2a3f5;
+  --ifm-color-primary-lighter: #b2a3f5;
+  --ifm-color-primary-lightest: #b2a3f5;
+  --ifm-footer-background-color: #1a1e23;
+  --ifm-navbar-background-color: #1a1e23;
+  --ifm-toc-border-color: #21262c;
+  --ifm-color-emphasis-200: #21262c;
+  --ifm-color-gray-800: #21262c;
+  --ifm-background-color: #101214;
+  --ifm-footer-title-color: var(--ifm-color-white);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --band-neutral-000: #101214;
+  --band-neutral-100: #1a1e23;
+  --band-neutral-200: #21262c;
+  --band-neutral-300: #293037;
+  --band-neutral-400: #39424c;
+  --band-neutral-500: #4e5a6e;
+  --band-neutral-600: #7d8a9d;
+  --band-neutral-700: #a0aec0;
+  --band-neutral-800: #cbd5e0;
+  --band-neutral-900: var(--ifm-color-white);
+}
+
+html {
+  background-color: var(--band-neutral-000);
+}
+
+html[data-theme='dark'] .logo-light {
+  display: none;
+}
+
+html[data-theme='light'] .logo-dark {
+  display: none;
+}
+
+.footer__bottom {
+  margin-top: 40px;
+}
+
+.footer__copyright {
+  font-size: 14px;
+}
+
+.footer {
+  border-top-width: 1px;
+  border-top-color: var(--band-neutral-200);
+  border-top-style: solid;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.card-link {
+  color: inherit;
+  text-decoration: none !important;
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--band-neutral-200);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+.card-link:hover {
+  background-color: var(--band-neutral-100);
+}
+
+.card-link .icon {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.card-link .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-link .card-content h4 {
+  margin-bottom: 10px;
+}
+
+.card-link .card-content p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-700);
+}
+
+svg {
+  display: inline;
+  vertical-align: middle;
+}
+
+.docs-tabs .tabs__item {
+  border: 1px solid var(--band-neutral-200);
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.docs-tabs .tabs__item.tabs__item--active {
+  background-color: var(--band-neutral-100);
+}
+
+.tabs-container .margin-top--md {
+  margin-top: 0 !important;
+}
+
+.tab-content {
+  padding: 30px 10px;
+  border: 1px solid var(--band-neutral-200);
+  border-radius: var(--ifm-global-radius);
+  border-top-left-radius: 0;
+}
