@@ -33,6 +33,7 @@
   --band-neutral-800: #323a43;
   --band-neutral-900: #202327;
   --ifm-tabs-padding-vertical: 10px;
+  --ifm-menu-link-sublist-icon: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBkPSJNMjAxLjQgMTM3LjRjMTIuNS0xMi41IDMyLjgtMTIuNSA0NS4zIDBsMTYwIDE2MGMxMi41IDEyLjUgMTIuNSAzMi44IDAgNDUuM3MtMzIuOCAxMi41LTQ1LjMgMEwyMjQgMjA1LjMgODYuNiAzNDIuNmMtMTIuNSAxMi41LTMyLjggMTIuNS00NS4zIDBzLTEyLjUtMzIuOCAwLTQ1LjNsMTYwLTE2MHoiLz48L3N2Zz4=);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -160,4 +161,10 @@ svg {
   border: 1px solid var(--band-neutral-200);
   border-radius: var(--ifm-global-radius);
   border-top-left-radius: 0;
+}
+
+.menu__link--sublist-caret:after {
+  background: var(--ifm-menu-link-sublist-icon) 50%/2rem 2rem;
+  background-repeat: no-repeat;
+  background-size: 12px;
 }

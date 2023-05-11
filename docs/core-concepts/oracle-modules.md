@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Oracle Modules
 
 ## oracle/v1/oracle.proto

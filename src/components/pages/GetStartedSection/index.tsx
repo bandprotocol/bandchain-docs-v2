@@ -7,42 +7,47 @@ const FeatureList: CardItem[] = [
     title: 'Introduction to BandChain',
     Svg: require('@site/static/img/intro.svg').default,
     description: <>High-level overview of the BandChain</>,
-    to: '/',
+    to: '/introduction/overview',
     target: '_self',
   },
   {
-    title: 'Client Libary',
+    title: 'Core Concepts',
     Svg: require('@site/static/img/dev.svg').default,
-    description: <>Learn how to use Band's client library to query data from BandChain</>,
-    to: '/',
+    description: (
+      <>Learn about the core concepts of BandChain, including tokenomics, gas and fees, and more.</>
+    ),
+    to: '/core-concepts/token-economics',
     target: '_self',
   },
   {
-    title: 'Band VRF',
+    title: 'Products',
     Svg: require('@site/static/img/intro.svg').default,
     description: (
-      <>Learn how to use Band's VRF to generate random numbers in a secure and verifiable way</>
+      <>
+        Learn about the products that BandChain offers, including the Standard Dataset and ,VRF, and
+        more.
+      </>
     ),
-    to: '/',
+    to: '/products/band-price-feed/band-standard-dataset',
     target: '_self',
   },
   {
-    title: 'DApps Integration',
+    title: 'Developer Guides',
     Svg: require('@site/static/img/dapps.svg').default,
-    description: <>Discover how to integrate Band's oracle data into your applications</>,
-    to: '/',
-    target: '_self',
-  },
-  {
-    title: 'Developer Tools',
-    Svg: require('@site/static/img/dev.svg').default,
     description: (
       <>
         Learn how to use Band's integration tools to integrate Band's oracle data into your
-        applications
+        applications.
       </>
     ),
-    to: '/',
+    to: '/develop/developer-guides/how-to-use-bandchain',
+    target: '_self',
+  },
+  {
+    title: 'Node & Validators',
+    Svg: require('@site/static/img/dev.svg').default,
+    description: <>Learn how to run a BandChain node and become a validator to earn rewards.</>,
+    to: '/node-validators/run-node/joining-mainnet/getting-started',
     target: '_self',
   },
 ]

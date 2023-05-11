@@ -1,6 +1,7 @@
 ---
 id: token-economics
 title: BAND Token
+sidebar_position: 1
 ---
 
 # BAND

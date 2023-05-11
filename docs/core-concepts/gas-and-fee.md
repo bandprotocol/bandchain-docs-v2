@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Gas and Fees
 
 :::info Pre-Requisite Readings
