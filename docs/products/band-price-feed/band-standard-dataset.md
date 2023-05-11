@@ -1,8 +1,14 @@
-# Using Band Standard Dataset
+---
+sidebar_position: 1
+---
 
-## Introduction
+# Introduction
 
-This section introduces our Band Standard Dataset, how we believe it will help developers, and the components behind it. {synopsis}
+:::info
+
+This section introduces our Band Standard Dataset, how we believe it will help developers, and the components behind it.
+
+:::
 
 The Band Standard Dataset introduces a standard for anyone looking to integrate price data from Band's oracle into their applications. The standard itself consists of two components: a new price dataset and our new `StdReference` interface.
 
