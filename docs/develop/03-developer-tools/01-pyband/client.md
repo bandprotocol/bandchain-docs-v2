@@ -511,7 +511,7 @@ This function returns the rates of the given cryptocurrency pairs.
 
 **Return**
 
-- List[[ReferencePrice](/develop/developer-tools/pyband/data.html#referenceprice)]
+- List[[ReferencePrice](/develop/developer-tools/pyband/data#referenceprice)]
 
 **Exception**
 

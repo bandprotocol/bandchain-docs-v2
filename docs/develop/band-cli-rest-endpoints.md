@@ -1,6 +1,6 @@
 # Band CLI & REST Endpoints
 
-You can get the RPC and REST endpoints from [here](band-endpoints).
+You can get the RPC and REST endpoints from [here](/develop/api-endpoints).
 
 ## Get Data Source by ID
 

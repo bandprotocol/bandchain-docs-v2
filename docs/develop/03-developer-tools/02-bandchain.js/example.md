@@ -969,5 +969,5 @@ And these are examples of Bandchain.js usages, for more information, feel free t
 [`address`]: /develop/developer-tools/bandchain.js/wallet#address
 [`getreferencedata`]: /develop/developer-tools/bandchain.js/client#getreferencedata-pairs-mincount-askcount
 [`sign`]: /develop/developer-tools/bandchain.js/wallet#sign-msg
-[`ibc`]: /whitepaper/cosmos-ibc
+[`ibc`]: /core-concepts/cosmos-ibc
 [`msgtransfer`]: https://docs.cosmos.network/master/modules/bank/03_messages
