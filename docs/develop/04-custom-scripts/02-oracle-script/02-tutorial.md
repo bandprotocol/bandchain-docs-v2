@@ -66,7 +66,7 @@ obi = { version = "0.0.2" }
 
 ### Writing the Oracle Script
 
-As mentioned in the [introduction](/custom-script/oracle-script/introduction.html), an oracle script execution flow can
+As mentioned in the [introduction](/develop/custom-scripts/oracle-script/introduction), an oracle script execution flow can
 be categorized into two main phases, the preparation phase and the execution phase. However, we also do need to define
 the oracle scripts input and outputs.
 

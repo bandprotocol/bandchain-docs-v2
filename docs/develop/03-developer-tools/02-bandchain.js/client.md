@@ -2,7 +2,7 @@
 
 This module provides functionalities to query data from BandChain and broadcast transactions to BandChain. It uses gRPC-web behind the scene which interact with gRPC-web proxy server.
 
-**Note:** The `<GRPC_WEB>` can be found in [API Endpoints](../../api-endpoints.md)
+**Note:** The `<GRPC_WEB>` can be found in [API Endpoints](/develop/api-endpoints)
 
 ## gRPC Errors
 
@@ -1028,11 +1028,11 @@ const client = new Client('<GRPC_WEB>')
 ]
 ```
 
-[`referencedata`]: /client-library/bandchain.js/data.html#referencedata
-[`txresponse`]: https://docs.cosmos.network/v0.44/core/proto-docs.html#txresponse
-[`queryrequestresponse`]: /client-library/protocol-buffers/oracle-module.html#queryrequestresponse
-[`request`]: /client-library/protocol-buffers/oracle-module.html#request
-[`oraclescript`]: /client-library/protocol-buffers/oracle-module.html#oraclescript
-[`datasource`]: /client-library/protocol-buffers/oracle-module.html#datasource
-[`baseaccount`]: https://docs.cosmos.network/v0.44/core/proto-docs.html#baseaccount
-[`block`]: https://docs.cosmos.network/v0.44/core/proto-docs.html#getlatestblockresponse
+[`referencedata`]: /develop/developer-tools/bandchain.js/data#referencedata
+[`txresponse`]: https://docs.cosmos.network/v0.44/core/proto-docs#txresponse
+[`queryrequestresponse`]: /core-concepts/oracle-modules#queryrequestresponse
+[`request`]: /core-concepts/oracle-modules#request
+[`oraclescript`]: /core-concepts/oracle-modules#oraclescript
+[`datasource`]: /core-concepts/oracle-modules#datasource
+[`baseaccount`]: https://docs.cosmos.network/v0.44/core/proto-docs#baseaccount
+[`block`]: https://docs.cosmos.network/v0.44/core/proto-docs#getlatestblockresponse

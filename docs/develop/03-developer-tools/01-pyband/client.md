@@ -2,7 +2,7 @@
 
 This module provides a function to get the data from Bandchain gRPC and send the data to Bandchain gRPC.
 
-**Note:** Get the `<GRPC>` [here](/technical-specifications/band-endpoints.html)
+**Note:** Get the `<GRPC>` [here](/develop/api-endpoints)
 
 ## get_data_source(id)
 
@@ -14,7 +14,7 @@ This function returns data source details of the given ID.
 
 **Return**
 
-- [oracle_type.DataSource](/client-library/protocol-buffers/oracle-module.html#datasource)
+- [oracle_type.DataSource](/core-concepts/oracle-modules#datasource)
 
 **Example**
 
@@ -54,7 +54,7 @@ This function returns oracle script details of the given ID.
 
 **Return**
 
-- [oracle_type.OracleScript](/client-library/protocol-buffers/oracle-module.html#oraclescript)
+- [oracle_type.OracleScript](/core-concepts/oracle-modules#oraclescript)
 
 **Example**
 
@@ -94,7 +94,7 @@ This function returns request details of the given ID.
 
 **Return**
 
-- [oracle_query.QueryRequestResponse](/client-library/protocol-buffers/oracle-module.html#queryrequestresponse)
+- [oracle_query.QueryRequestResponse](/core-concepts/oracle-modules#queryrequestresponse)
 
 **Example**
 
@@ -177,7 +177,7 @@ This function returns the latest block in the chain.
 
 **Return**
 
-- [`tendermint_query.GetLatestBlockResponse`](https://docs.cosmos.network/v0.44/core/proto-docs.html#getlatestblockresponse)
+- [`tendermint_query.GetLatestBlockResponse`](https://buf.build/cosmos/cosmos-sdk/docs/main:cosmos.base.tendermint.v1beta1#cosmos.base.tendermint.v1beta1.GetLatestBlockResponse)
 
 **Example**
 
@@ -400,7 +400,7 @@ This function returns the account details of the specified address.
 
 **Return**
 
-- Optional[[auth_type.BaseAccount](https://docs.cosmos.network/v0.44/core/proto-docs.html#baseaccount)]
+- Optional[[auth_type.BaseAccount](https://buf.build/cosmos/cosmos-sdk/docs/main:cosmos.auth.v1beta1#cosmos.auth.v1beta1.BaseAccount)]
 
 **Example**
 
@@ -511,7 +511,7 @@ This function returns the rates of the given cryptocurrency pairs.
 
 **Return**
 
-- List[[ReferencePrice](/client-library/pyband/data.html#referenceprice)]
+- List[[ReferencePrice](/develop/developer-tools/pyband/data.html#referenceprice)]
 
 **Exception**
 
@@ -573,7 +573,7 @@ This function returns the latest request.
 
 **Return**
 
-- [oracle_query.QueryRequestSearchResponse](/client-library/protocol-buffers/oracle-module.html#queryrequestsearchresponse)
+- [oracle_query.QueryRequestSearchResponse](/core-concepts/oracle-modules#queryrequestsearchresponse)
 
 **Example**
 

@@ -1,7 +1,7 @@
 # Deployment
 
 On BandChain, an oracle script can be registered into the system by anyone. This is done through the registrant sending
-a [`MsgCreateOracleScript`](/whitepaper/protocol-messages.html#msgcreateoraclescript) message to the chain.
+a [`MsgCreateOracleScript`](/core-concepts/protocol-messages#msgcreateoraclescript) message to the chain.
 
 A `MsgCreateOracleScript` message contains various parameters of the oracle script that is to be registered. These
 parameters include:
@@ -16,11 +16,11 @@ parameters include:
 - `sender`: The message sender account.
 
 In order to send a `MsgCreateOracleScript` message, we can use either
-[bandchain.js](../../03-developer-tools/02-bandchain.js/getting-started.md) or
-[pyband](../../03-developer-tools/01-pyband/getting-started.md)
+[bandchain.js](/develop/developer-tools/bandchain.js/getting-started) or
+[pyband](/develop/developer-tools/pyband/getting-started)
 
 An example on how to send a `MsgCreateOracleScript` message via
-[bandchain.js](../../03-developer-tools/02-bandchain.js/getting-started.md) can be seen below.
+[bandchain.js](/develop/developer-tools/bandchain.js/getting-started) can be seen below.
 
 ```javascript
 import { Client, Wallet, Message, Coin, Transaction, Fee } from '@bandprotocol/bandchain.js'
@@ -87,7 +87,7 @@ async function createOracleScript() {
 ```
 
 An example on how to send a `MsgCreateDataSource` message via
-[pyband](../../03-developer-tools/01-pyband/getting-started.md) can also be seen below.
+[pyband](/develop/developer-tools/pyband/getting-started) can also be seen below.
 
 ```python
 import os

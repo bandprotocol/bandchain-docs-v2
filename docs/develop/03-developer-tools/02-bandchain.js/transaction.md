@@ -147,7 +147,7 @@ Set memo to `Transaction`.
 
 ## getSignDoc()
 
-Get serialized data of transaction's content to be signed from `Transaction` by using `SIGNMODE_DIRECT`. See more about [signing mode](https://docs.cosmos.network/master/core/proto-docs.html#signmode).
+Get serialized data of transaction's content to be signed from `Transaction` by using `SIGNMODE_DIRECT`. See more about [signing mode](https://docs.cosmos.network/master/core/proto-docs#signmode).
 
 **Return**
 
@@ -164,7 +164,7 @@ Get serialized data of transaction's content to be signed from `Transaction` by 
 
 ## getSignMessage()
 
-Get serialized data of transaction's content to be signed from `Transaction` by using `SIGN_MODE_LEGACY_AMINO_JSON`. See more about [signing mode](https://docs.cosmos.network/master/core/proto-docs.html#signmode). **When using the Ledger to sign message, you need to use this method.**
+Get serialized data of transaction's content to be signed from `Transaction` by using `SIGN_MODE_LEGACY_AMINO_JSON`. See more about [signing mode](https://docs.cosmos.network/master/core/proto-docs#signmode). **When using the Ledger to sign message, you need to use this method.**
 
 **Return**
 
@@ -321,9 +321,9 @@ const sendCoin = async () => {
 ```
 
 [`any`]: https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/any.proto
-[`getaccount`]: /client-library/bandchain.js/client.html#getaccount-address
-[`getchainid`]: /client-library/bandchain.js/client.html#getchainid
-[`fee`]: https://docs.cosmos.network/v0.44/core/proto-docs.html#fee
-[`publickey`]: /client-library/bandchain.js/wallet.html#publickey
-[`signmode`]: https://docs.cosmos.network/master/core/proto-docs.html#signmode
-[`client`]: /client-library/bandchain.js/client.html
+[`getaccount`]: /develop/developer-tools/bandchain.js/client#getaccount-address
+[`getchainid`]: /develop/developer-tools/bandchain.js/client#getchainid
+[`fee`]: https://docs.cosmos.network/v0.44/core/proto-docs#fee
+[`publickey`]: /develop/developer-tools/bandchain.js/wallet#publickey
+[`signmode`]: https://docs.cosmos.network/master/core/proto-docs#signmode
+[`client`]: /develop/developer-tools/bandchain.js/client

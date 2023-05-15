@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Overview
 
-PyBand is a library written in Python used for interacting with BandChain. The library provides classes, methods, and [protobuf](/client-library/protocol-buffers/oracle-module.html) classes for the ease of sending transactions, querying data, OBI encoding, and wallet management.
+PyBand is a library written in Python used for interacting with BandChain. The library provides classes, methods, and [protobuf](/core-concepts/oracle-modules) classes for the ease of sending transactions, querying data, OBI encoding, and wallet management.
 
 The library is implemented based on gRPC-web protocol which sends HTTP/1.5 or HTTP/2 requests to a gRPC proxy server, before serving them as HTTP/2 to gRPC server.
 
@@ -31,7 +31,7 @@ pip install pyband
 
 This section describes the methods used to send a transaction containing an oracle request to BandChain
 
-**Step 1:** Import `pyband` and create a parameter: `grpc_url` with the required `<GRPC>` endpoint which can be found [here](/technical-specifications/band-endpoints.html). Then the client instance needs to be initialized in order to allow for the methods in client module to be used.
+**Step 1:** Import `pyband` and create a parameter: `grpc_url` with the required `<GRPC>` endpoint which can be found [here](/develop/api-endpoints). Then the client instance needs to be initialized in order to allow for the methods in client module to be used.
 
 ```python
 from pyband.client import Client
@@ -112,7 +112,7 @@ obi = PyObi("{symbols:[string],multiplier:u64}/{rates:[u64]}")
 calldata = obi.encode({"symbols": ["ETH"], "multiplier": 100})
 ```
 
-The message can be any message as listed in [Oracle Module](/client-library/protocol-buffers/oracle-module.html#oracle-v1-tx-proto) or [Cosmos Based Messages](https://docs.cosmos.network/v0.44/core/proto-docs.html). However, please note that our message should be imported from the generated [protobuf files](https://github.com/bandprotocol/chain/tree/v2.0.3/proto/oracle/v1).
+The message can be any message as listed in [Oracle Modules](/core-concepts/oracle-modules#oracle-v1-tx-proto) or [Cosmos Based Messages](https://docs.cosmos.network/v0.47/core/proto-docs). However, please note that our message should be imported from the generated [protobuf files](https://github.com/bandprotocol/chain/tree/master/proto/oracle/v1).
 
 #### Sequence and Account Number
 
@@ -510,7 +510,7 @@ And the result should look like this.
 
 This section shows an example on how to query data from BandChain. This example queries the standard price reference based on the given symbol pairs, min count, and ask count.
 
-**Step 1:** Import `pyband` and create a parameter: `grpc_url` with the required `<GRPC>` endpoint which can be found [here](/technical-specifications/band-endpoints.html). Then the client instance needs to be initialized in order to allow for the methods in client module to be used.
+**Step 1:** Import `pyband` and create a parameter: `grpc_url` with the required `<GRPC>` endpoint which can be found [here](/develop/api-endpoints). Then the client instance needs to be initialized in order to allow for the methods in client module to be used.
 
 ```python
 from pyband.client import Client
@@ -563,16 +563,16 @@ And running the code above should return a result that looks like this.
 ]
 ```
 
-[`get_tx_data`]: /client-library/pyband/transaction.html#get-tx-data-signature-public-key
-[`get_sign_doc`]: /client-library/pyband/transaction.html#get-sign-doc-public-key
-[`get_account`]: /client-library/pyband/client.html#get-account-address
-[`transaction`]: /client-library/pyband/transaction.html
-[`send_tx_block_mode`]: /client-library/pyband/client.html#send-tx-block-mode-tx-bytes
-[`privatekey`]: /client-library/pyband/wallet.html#private-key
-[`client`]: /client-library/pyband/client.html
-[`coin`]: https://docs.cosmos.network/v0.44/core/proto-docs.html#coin
-[`address`]: /client-library/pyband/wallet.html#address
-[`from_acc_bech32`]: /client-library/pyband/wallet.html#from-acc-bech32-bech-2
-[`get_reference_data`]: /client-library/pyband/client.html#get-reference-data-pairs-min-count-ask-count
-[`msgrequestdata`]: /client-library/protocol-buffers/oracle-module.html#msgrequestdata
-[`msgsend`]: https://docs.cosmos.network/v0.44/core/proto-docs.html#msgsend
+[`get_tx_data`]: /develop/developer-tools/pyband/transaction#get-tx-data-signature-public-key
+[`get_sign_doc`]: /develop/developer-tools/pyband/transaction#get-sign-doc-public-key
+[`get_account`]: /develop/developer-tools/pyband/client#get-account-address
+[`transaction`]: /develop/developer-tools/pyband/transaction
+[`send_tx_block_mode`]: /develop/developer-tools/pyband/client#send-tx-block-mode-tx-bytes
+[`privatekey`]: /develop/developer-tools/pyband/wallet#private-key
+[`client`]: /develop/developer-tools/pyband/client
+[`coin`]: https://buf.build/cosmos/cosmos-sdk/docs/main:cosmos.base.v1beta1#cosmos.base.v1beta1.Coin
+[`address`]: /develop/developer-tools/pyband/wallet#address
+[`from_acc_bech32`]: /develop/developer-tools/pyband/wallet#from-acc-bech32-bech-2
+[`get_reference_data`]: /develop/developer-tools/pyband/client#get-reference-data-pairs-min-count-ask-count
+[`msgrequestdata`]: /core-concepts/oracle-modules#msgrequestdata
+[`msgsend`]: https://buf.build/cosmos/cosmos-sdk/docs/main:cosmos.bank.v1beta1#cosmos.bank.v1beta1.Msg.Send

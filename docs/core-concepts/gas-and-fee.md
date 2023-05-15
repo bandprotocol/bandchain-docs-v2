@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::info Pre-Requisite Readings
 
-- [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees.html)
+- [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees)
 
 :::
 

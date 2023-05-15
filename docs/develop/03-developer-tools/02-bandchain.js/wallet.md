@@ -825,7 +825,7 @@ This function returns the signature of the associated Ledger. The message is sig
 
 - `<Buffer>`: A signature of the connected ledger over the given Transaction message.
 
-[Example in Bandchain.js Basic Usage](/client-library/bandchain.js/getting-started.html#sending-band-token-using-ledger)
+[Example in Bandchain.js Basic Usage](/develop/developer-tools/bandchain.js/example)
 
 ### disconnect
 
@@ -844,7 +844,7 @@ const { Ledger } = Wallet
 })()
 ```
 
-[privatekey]: /client-library/bandchain.js/wallet.html#privatekey
-[publickey]: /client-library/bandchain.js/wallet.html#publickey
-[address]: /client-library/bandchain.js/wallet.html#publickey
-[pubkey]: https://docs.cosmos.network/v0.42/basics/accounts.html#pubkeys
+[privatekey]: /develop/developer-tools/bandchain.js/wallet#privatekey
+[publickey]: /develop/developer-tools/bandchain.js/wallet#publickey
+[address]: /develop/developer-tools/bandchain.js/wallet#publickey
+[pubkey]: https://docs.cosmos.network/v0.42/basics/accounts#pubkeys

@@ -173,5 +173,5 @@ The data source is an off-chain execution script that is used to call external A
 #### Learn more
 
 - [Band VRF Whitepaper](https://bandprotocol.com/static/Band-VRF-Whitepaper.pdf)
-- [Band oracle script docs](/custom-script/oracle-script/introduction.html)
-- [Band data source docs](/custom-script/data-source/introduction.html)
+- [Band oracle script docs](/develop/custom-scripts/oracle-script/introduction)
+- [Band data source docs](/develop/custom-scripts/data-source/introduction)

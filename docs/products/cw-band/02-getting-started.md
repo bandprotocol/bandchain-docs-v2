@@ -1,13 +1,13 @@
 # Getting started
 
-This guide serves as a quick reference on how to request and receive data from BandChain. For examples of CosmWasm contracts, please refer to the [Example Use Cases](./example.md) section.
+This guide serves as a quick reference on how to request and receive data from BandChain. For examples of CosmWasm contracts, please refer to the [Example Use Cases](/products/cw-band/example) section.
 
 ### Step 1: Prepare an oracle script and data sources
 
 There are two main components on the BandChain in the requesting process:
 
-- [Oracle script](/custom-script/oracle-script/introduction.html)
-- [Data source](/custom-script/data-source/introduction.html)
+- [Oracle script](/develop/custom-scripts/oracle-script/introduction)
+- [Data source](/develop/custom-scripts/data-source/introduction)
 
 For requesting data from BandChain on the smart contract, you have to deploy both of them in the BandChain first so that your smart contract can specify the `oracle_script_id` when sending the request.
 

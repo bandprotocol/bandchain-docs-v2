@@ -1,7 +1,7 @@
 # Deployment
 
 On BandChain, a data source can be registered into the system by anyone. This is done through the registrant sending
-a [`MsgCreateDataSource`](/whitepaper/protocol-messages.html#msgcreatedatasource) message to the chain.
+a [`MsgCreateDataSource`](/core-concepts/protocol-messages#msgcreatedatasource) message to the chain.
 
 A `MsgCreateDataSource` message contains various parameters of the data source that is to be registered. These
 parameters include:
@@ -17,11 +17,10 @@ parameters include:
 - `sender`: The message sender account.
 
 In order to send a `MsgCreateDataSource` message, we can use either
-[bandchain.js](https://docs.bandchain.org/client-library/bandchain.js/getting-started.html#) or
-[pyband](https://docs.bandchain.org/client-library/pyband/getting-started.html)
+[bandchain.js](/develop/developer-tools/bandchain.js/getting-started) or
+[pyband](/develop/developer-tools/pyband/getting-started)
 
-An example on how to send a `MsgCreateDataSource` message via
-[bandchain.js](https://docs.bandchain.org/client-library/bandchain.js/getting-started.html#) can be seen below.
+An example on how to send a `MsgCreateDataSource` message via **BandChain.js** can be seen below.
 
 ```javascript
 import { Client, Wallet, Message, Coin, Transaction, Fee } from '@bandprotocol/bandchain.js'
@@ -89,7 +88,7 @@ async function createDataSource() {
 ```
 
 An example on how to send a `MsgCreateDataSource` message via
-[pyband](https://docs.bandchain.org/client-library/pyband/getting-started.html) can also be seen below.
+[pyband](/develop/developer-tools/pyband/getting-started) can also be seen below.
 
 ```python
 import os

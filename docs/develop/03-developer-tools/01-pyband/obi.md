@@ -1,6 +1,6 @@
 # OBI Module
 
-Oracle Binary Encoding (OBI) is the standard way to serialized and deserialize binary data in the BandChain ecosystem. This module provides the functionality to serialize data. [More details](https://pyband-preview-doc.surge.sh/technical-specifications/obi.html)
+Oracle Binary Encoding (OBI) is the standard way to serialized and deserialize binary data in the BandChain ecosystem. This module provides the functionality to serialize data. [More details](/develop/developer-guides/obi)
 
 ## Constructor
 

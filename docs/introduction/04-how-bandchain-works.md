@@ -22,7 +22,7 @@ BandChain achieves the aforementioned goals with a blockchain specifically built
 
 A data source is the most fundamental unit in BandChain's oracle system. It defines the procedure to retrieve raw data from a source and the fee associated with the data query.
 
-On BandChain, a data source can be registered into the system by anyone. This is done through the registrant sending a [`MsgCreateDataSource`](./protocol-messages.html#msgcreatedatasource) message to the chain. In this message, they specify various parameters the data source they wish to register, including
+On BandChain, a data source can be registered into the system by anyone. This is done through the registrant sending a [`MsgCreateDataSource`](/core-concepts/protocol-messages#msgcreatedatasource) message to the chain. In this message, they specify various parameters the data source they wish to register, including
 
 - the **sender** who wish to create the data source
 - the **owner** of the data source, if specified
@@ -70,12 +70,12 @@ An oracle script is an executable program that encodes:
 
 Oracle scripts are also Turing-complete and can be programmed in multiple languages. This composability and Turing-completeness makes oracle scripts very similar to [smart contracts](https://en.wikipedia.org/wiki/Smart_contract).
 
-To create an oracle script, the creator must broadcast a [`MsgCreateOracleScript`](./protocol-messages.html#msgcreateoraclescript) to BandChain. The contents of the message is simlar to `MsgCreateDataSource`, and includes:
+To create an oracle script, the creator must broadcast a [`MsgCreateOracleScript`](/core-concepts/protocol-messages#msgcreateoraclescript) to BandChain. The contents of the message is simlar to `MsgCreateDataSource`, and includes:
 
 - the **sender** who wishes to create the oracle script
 - the **owner** of the oracle script, if specified
 - the **name** of the oracle script
-- the [**OWasm**](./oracle-webassembly) compiled binary attached to this oracle script
+- the [**OWasm**](/core-concepts/oracle-webassembly) compiled binary attached to this oracle script
 - the **schema** detailing the inputs and outputs of this oracle script, as well as the corresponding types
 - the **URL** for the source code of this oracle script
 
@@ -133,7 +133,7 @@ BandChain's network consists of a number of network participants, each owning BA
 
 :::info More Info
 
-- [How validator be choosing](../core-concepts/05-decentralized-validator-sampling.md)
+- [How validator be choosing](/core-concepts/decentralized-validator-sampling)
 
 :::
 
@@ -184,9 +184,9 @@ Once the data transaction is confirmed on BandChain, the requested oracle script
 
 ### 3. Fetching the Data
 
-First, the oracle script's preparation function will emit the set of raw data requests necessary to continue the script's execution. The chain's validators, who are [chosen at random](./decentralized-validator-sampling) for security reasons, will then inspect the raw data requests and execute the associated data sources' procedures as instructed by the request. Specifically, each of the chosen validator will attempt to retrieve information from all of the data sources specified in the executed oracle script.
+First, the oracle script's preparation function will emit the set of raw data requests necessary to continue the script's execution. The chain's validators, who are [chosen at random](/core-concepts/decentralized-validator-sampling) for security reasons, will then inspect the raw data requests and execute the associated data sources' procedures as instructed by the request. Specifically, each of the chosen validator will attempt to retrieve information from all of the data sources specified in the executed oracle script.
 
-The validators that successfully retrieved data from all the sources will then submit a raw data report to BandChain, containing the results they got from each of the data sources, by broadcasting [`MsgReportData`](./protocol-messages.html#msgreportdata). Once a sufficient number of validators, specified in the data request’s security parameters, have reported the their results, BandChain will begin executing the oracle script’s second part of aggregating request result.
+The validators that successfully retrieved data from all the sources will then submit a raw data report to BandChain, containing the results they got from each of the data sources, by broadcasting [`MsgReportData`](/core-concepts/protocol-messages#msgreportdata). Once a sufficient number of validators, specified in the data request’s security parameters, have reported the their results, BandChain will begin executing the oracle script’s second part of aggregating request result.
 
 Note that for data from permissioned sources (e.g. under paywall), the data sources are expected to verify that payment has occurred on BandChain and supply data to requested validators accordingly. That way, BandChain allows API providers to monetize data with BandChain's on-chain payment settlement without needing to trust a middleman party.
 

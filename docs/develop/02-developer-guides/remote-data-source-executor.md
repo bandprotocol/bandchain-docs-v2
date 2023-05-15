@@ -1,6 +1,6 @@
 # Remote Data Source Executor
 
-The remote data source executor executes the various [data sources](../whitepaper/terminology.md#data-sources) stored on BandChain in order to retrieve data from the data providers. The executor itself is a [`function-as-a-Service`](https://en.wikipedia.org/wiki/function_as_a_service) hosted on a cloud service provider.
+The remote data source executor executes the various [data sources](/introduction/how-bandchain-works#data-sources) stored on BandChain in order to retrieve data from the data providers. The executor itself is a [`function-as-a-Service`](https://en.wikipedia.org/wiki/function_as_a_service) hosted on a cloud service provider.
 
 The goal of this design is to separate data source execution processes from processes related to the validator node itself. This separation of execution will be beneficial in cases where the data sources are not working correctly ( infinite loop, bad code execution, for example). In those cases, such separation can prevent validator nodes from overloading or crashing due to the error.
 

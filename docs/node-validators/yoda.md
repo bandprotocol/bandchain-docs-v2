@@ -3,7 +3,7 @@
 Yoda is a program that is used by BandChain's validator nodes to automatically fulfill data for oracle requests.
 
 Since a subset of validators who are selected for a data request must return the data they received from running the
-specified data source(s), each of them have to send a [`MsgReportData`](/whitepaper/protocol-messages.html#msgreportdata) transaction to BandChain in order to fulfill their duty.
+specified data source(s), each of them have to send a [`MsgReportData`](/core-concepts/protocol-messages#msgreportdata) transaction to BandChain in order to fulfill their duty.
 
 Although the transaction can be sent manually by user, it is not convenient, and would be rather time-consuming.
 Furthermore, most data providers already have APIs that can be used to query data automatically by another software.
@@ -63,7 +63,7 @@ oracle requests and not to be used elsewhere or by someone else other than assig
 Yoda executes those data source scripts by sending their script files along with necessary information for verifying
 oracle request to Yoda's executor environment, which helps running data source scripts and returns results to Yoda.
 More information about data source executor can be found in
-[this section](/technical-specifications/remote-data-source-executor.html).
+[this section](/develop/developer-guides/remote-data-source-executor).
 
 ### 4. Collect Results from Executor, Add to Local Pending List
 

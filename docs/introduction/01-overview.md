@@ -10,6 +10,6 @@ Its flexible design allows developers to query any range of data types, includin
 
 Since the [launch of our GuanYu mainnet](https://medium.com/bandprotocol/bandchain-phase-1-successful-mainnet-upgrade-and-guanyu-launch-ac2d0334da77) back in October 2020, we have seen an exponential increase in adoption in a diverse array of use cases. From applications in lending, money markets, gambling, asset, and tokenization, to both on-chain and real-world insurance.
 
-With the **Phase 2 (Laozi) upgrade**, we aim to expand further the scope of what is possible with our oracle through multiple ways. Two, in particular, includes the option for data providers to receive payment directly on-chain from developers using their services on BandChain, and allowing for cross-chain oracle requests through the [Inter-Blockchain Communication (IBC)](https://docs.cosmos.network/master/ibc/overview.html) standard.
+With the **Phase 2 (Laozi) upgrade**, we aim to expand further the scope of what is possible with our oracle through multiple ways. Two, in particular, includes the option for data providers to receive payment directly on-chain from developers using their services on BandChain, and allowing for cross-chain oracle requests through the [Inter-Blockchain Communication (IBC)](https://ibc.cosmos.network/) standard.
 
 The new feature also enables a new cohort of products and services that Band oracle can provide to developers. Some examples of these are a more decentralized price oracle, verifiable randomness, and facilitating cross-chain communication.

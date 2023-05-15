@@ -6,7 +6,7 @@ This module provides the preparatory component that is required for sending a tr
 
 This function add one or more messages to `<Transaction>`
 
-The message can be any message as listed in [Oracle Module](/client-library/protocol-buffers/oracle-module.html#oracle-v1-tx-proto) or [Cosmos Based Messages](https://docs.cosmos.network/v0.44/core/proto-docs.html). Please note that our message should be imported from the generated [protobuf files](https://github.com/bandprotocol/chain/tree/v2.0.3/proto/oracle/v1).
+The message can be any message as listed in [Oracle Modules](/core-concepts/oracle-modules#oracle-v1-tx-proto) or [Cosmos Based Messages](https://docs.cosmos.network/v0.47/core/proto-docs). Please note that our message should be imported from the generated [protobuf files](https://github.com/bandprotocol/chain/tree/master/proto/oracle/v1).
 
 **Parameter**
 
@@ -168,7 +168,7 @@ This function returns a transaction that need to be sent.
 
 ### Example use case
 
-**Note:** Get the `<GRPC>` [here](/technical-specifications/band-endpoints.html)
+**Note:** Get the `<GRPC>` [here](/develop/api-endpoints)
 
 ```python
 import os

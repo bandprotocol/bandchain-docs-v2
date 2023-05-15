@@ -8,7 +8,7 @@ sidebar_position: 3
 
 This section describes methods to send a transaction of oracle request to BandChain
 
-**Step 1:** Import `Client` from `@bandprotocol/bandchain.js` and creates a new instance of `grpcUrl` as a parameter and you can get `<GRPC_WEB>` endpoint from [here](../../api-endpoints.md). Then initialize the client instance. Every method in client module can now be used.
+**Step 1:** Import `Client` from `@bandprotocol/bandchain.js` and creates a new instance of `grpcUrl` as a parameter and you can get `<GRPC_WEB>` endpoint from [here](/develop/api-endpoints). Then initialize the client instance. Every method in client module can now be used.
 
 ```js
 import { Client } from '@bandprotocol/bandchain.js'
@@ -396,7 +396,7 @@ The response should be similar to as shown below
 
 This section shows an example on how to query data from BandChain. This example query standard price references based on given symbol pairs, min count, and ask count.
 
-**Step 1:** Import `bandchain.js` and put `grpc_url_web` as a parameter and you can get `<GRPC_WEB>` endpoint from [here](/technical-specifications/band-endpoints.html). Then initialize the client instance. Every method in client module can now be used.
+**Step 1:** Import `bandchain.js` and put `grpc_url_web` as a parameter and you can get `<GRPC_WEB>` endpoint from [here](/develop/api-endpoints). Then initialize the client instance. Every method in client module can now be used.
 
 ```js
 import { Client } from '@bandprotocol/bandchain.js'
@@ -939,7 +939,7 @@ async function getFaucet() {
     body: JSON.stringify(body),
   }
 
-  // See https://docs.bandchain.org/technical-specifications/band-endpoints.html#laozi-testnet-5
+  // See https://docs.bandchain.org/develop/api-endpoints#laozi-testnet-5
   let response = await fetch(`${BAND_FAUCET_ENDPOINT}`, options)
 
   console.log(response)
@@ -951,23 +951,23 @@ getFaucet()
 
 And these are examples of Bandchain.js usages, for more information, feel free to dive into specifications in each module.
 
-[`gettxdata`]: /client-library/bandchain.js/transaction.html#gettxdata-signature-publickey
-[`getsigndoc`]: /client-library/bandchain.js/transaction.html#getsigndoc
-[`getchainid`]: /client-library/bandchain.js/client.html#getchainid
-[`getaccount`]: /client-library/bandchain.js/client.html#getaccount-address
-[`withsender`]: /client-library/bandchain.js/transaction.html#withsender-client-sender
-[`msgrequestdata`]: /client-library/protocol-buffers/oracle-module.html#msgrequestdata
-[`msgsend`]: https://docs.cosmos.network/master/modules/bank/03_messages.html
-[`transaction`]: /client-library/bandchain.js/transaction.html#transaction-module
-[`account`]: https://docs.cosmos.network/v0.44/basics/accounts.html
-[`sendtxblockmode`]: /client-library/bandchain.js/client.html#sendtxblockmode-txbytes
-[`sendtxsyncmode`]: /client-library/bandchain.js/client.html#sendtxsyncmode-txbytes
-[`sendtxasyncmode`]: /client-library/bandchain.js/client.html#sendtxasyncmode-data
-[`privatekey`]: /client-library/bandchain.js/wallet.html#privatekey
-[`client`]: /client-library/bandchain.js/client.html#client-module
-[`coin`]: https://docs.cosmos.network/v0.44/core/proto-docs.html#coin
-[`address`]: /client-library/bandchain.js/wallet.html#address
-[`getreferencedata`]: /client-library/bandchain.js/client.html#getreferencedata-pairs-mincount-askcount
-[`sign`]: /client-library/bandchain.js/wallet.html#sign-msg
-[`ibc`]: /whitepaper/cosmos-ibc.html
-[`msgtransfer`]: https://docs.cosmos.network/master/modules/bank/03_messages.html
+[`gettxdata`]: /develop/developer-tools/bandchain.js/transaction#gettxdata-signature-publickey
+[`getsigndoc`]: /develop/developer-tools/bandchain.js/transaction#getsigndoc
+[`getchainid`]: /develop/developer-tools/bandchain.js/client#getchainid
+[`getaccount`]: /develop/developer-tools/bandchain.js/client#getaccount-address
+[`withsender`]: /develop/developer-tools/bandchain.js/transaction#withsender-client-sender
+[`msgrequestdata`]: /core-concepts/oracle-modules#msgrequestdata
+[`msgsend`]: https://docs.cosmos.network/master/modules/bank/03_messages
+[`transaction`]: /develop/developer-tools/bandchain.js/transaction#transaction-module
+[`account`]: https://docs.cosmos.network/v0.44/basics/accounts
+[`sendtxblockmode`]: /develop/developer-tools/bandchain.js/client#sendtxblockmode-txbytes
+[`sendtxsyncmode`]: /develop/developer-tools/bandchain.js/client#sendtxsyncmode-txbytes
+[`sendtxasyncmode`]: /develop/developer-tools/bandchain.js/client#sendtxasyncmode-data
+[`privatekey`]: /develop/developer-tools/bandchain.js/wallet#privatekey
+[`client`]: /develop/developer-tools/bandchain.js/client#client-module
+[`coin`]: https://docs.cosmos.network/v0.44/core/proto-docs#coin
+[`address`]: /develop/developer-tools/bandchain.js/wallet#address
+[`getreferencedata`]: /develop/developer-tools/bandchain.js/client#getreferencedata-pairs-mincount-askcount
+[`sign`]: /develop/developer-tools/bandchain.js/wallet#sign-msg
+[`ibc`]: /whitepaper/cosmos-ibc
+[`msgtransfer`]: https://docs.cosmos.network/master/modules/bank/03_messages
