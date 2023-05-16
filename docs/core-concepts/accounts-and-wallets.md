@@ -76,7 +76,7 @@ You can query an account address using the Band CLI or REST clients:
 
 ```bash
 # Query account address using CLI
-bandcli keys show <key-name> -a ## TODO: change to bandd
+bandd keys show <key-name> -a
 ```
 
 Query account address using REST client
