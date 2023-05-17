@@ -72,10 +72,12 @@ const [mnemonic, privateKey] = PrivateKey.generate("m/44'/494'/0'/0/0")
 const address = PrivateKey.fromMnemonic(mnemonic).toPubkey().toAccBech32() // band1ycw2277nurr5zymw7exqf8za2t73y3ys5zwf7z
 ```
 
+## Querying an Account
+
 You can query an account address using the Band CLI or REST clients:
 
 ```bash
-# Query account address using CLI
+# Query account address using bandd
 bandd keys show <key-name> -a
 ```
 
