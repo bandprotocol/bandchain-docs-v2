@@ -5,14 +5,14 @@ import Card, { CardItem } from '../../Card'
 const FeatureList: CardItem[] = [
   {
     title: 'Introduction to BandChain',
-    Svg: require('@site/static/img/intro.svg').default,
+    iconPath: require('@site/static/img/introduction.png').default,
     description: <>High-level overview of the BandChain</>,
     to: '/introduction/overview',
     target: '_self',
   },
   {
     title: 'Core Concepts',
-    Svg: require('@site/static/img/dev.svg').default,
+    iconPath: require('@site/static/img/Core_Concepts.png').default,
     description: (
       <>Learn about the core concepts of BandChain, including tokenomics, gas and fees, and more.</>
     ),
@@ -21,7 +21,7 @@ const FeatureList: CardItem[] = [
   },
   {
     title: 'Products',
-    Svg: require('@site/static/img/intro.svg').default,
+    iconPath: require('@site/static/img/Products.png').default,
     description: (
       <>
         Learn about the products that BandChain offers, including the Standard Dataset and ,VRF, and
@@ -33,7 +33,7 @@ const FeatureList: CardItem[] = [
   },
   {
     title: 'Developer Guides',
-    Svg: require('@site/static/img/dapps.svg').default,
+    iconPath: require('@site/static/img/Guides.png').default,
     description: (
       <>
         Learn how to use Band's integration tools to integrate Band's oracle data into your
@@ -45,7 +45,7 @@ const FeatureList: CardItem[] = [
   },
   {
     title: 'Node & Validators',
-    Svg: require('@site/static/img/dev.svg').default,
+    iconPath: require('@site/static/img/Nodes.png').default,
     description: <>Learn how to run a BandChain node and become a validator to earn rewards.</>,
     to: '/node-validators/run-node/joining-mainnet/getting-started',
     target: '_self',

@@ -194,6 +194,6 @@ Note that for data from permissioned sources (e.g. under paywall), the data sour
 
 This phase begins by aggregating all of the validators' reports (which contains the data each received from the data sources) into a final single result. This final result is then permanently stored in BandChain's application state. Once stored, the result becomes available on the chain's state tree and can be sent to other blockchain.
 
-![Oracle Data Request Flow](https://i.imgur.com/9i7FrYt.png)
+![Oracle Data Request Flow](../../static/img/Aggregating_and_Request_Result_Storage.png)
 
 When the final result is successfully stored, an oracle data proof is also produced. This proof is a Merkle proof that shows the existence of the final result of the data request as well as other related information (oracle script hash, the parameters, the time of execution, etc) on BandChain. This proof can then be used by smart contracts on other blockchain to verify the existence of the data as well as to decode and retrieve the result stored. Both of these can be done by interacting with our lite client.
