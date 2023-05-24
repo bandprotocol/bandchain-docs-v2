@@ -5,7 +5,7 @@ import Card, { CardItem } from '../../Card'
 const FeatureList: CardItem[] = [
   {
     title: 'Introduction to BandChain',
-    iconPath: require('@site/static/img/introduction.png').default,
+    iconPath: require('@site/static/img/Introduction.png').default,
     description: <>High-level overview of the BandChain</>,
     to: '/introduction/overview',
     target: '_self',
