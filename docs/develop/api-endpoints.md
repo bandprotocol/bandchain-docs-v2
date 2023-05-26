@@ -19,4 +19,4 @@
 | REST     | https://laozi-testnet6.bandchain.org/api/     |
 | GRPC     | https://laozi-testnet6.bandchain.org          |
 | GRPC_WEB | https://laozi-testnet6.bandchain.org/grpc-web |
-| faucet   | https://laozi-testnet6.bandchain.org/faucet   |
+| Faucet   | https://laozi-testnet6.bandchain.org/faucet   |

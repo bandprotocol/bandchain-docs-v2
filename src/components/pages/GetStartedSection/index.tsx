@@ -28,7 +28,7 @@ const FeatureList: CardItem[] = [
         more.
       </>
     ),
-    to: '/products/band-price-feed/band-standard-dataset',
+    to: '/products/band-standard-dataset/introduction',
     target: '_self',
   },
   {
