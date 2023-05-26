@@ -42,4 +42,4 @@ async function exampleGetReferenceData() {
 })()
 ```
 
-For a full tutorial and more usage on BandChain.js, please refer to the [Getting Started](<(/develop/developer-tools/bandchain.js/getting-started)>) section.
+For a full tutorial and more usage on BandChain.js, please refer to the [Getting Started](/develop/developer-tools/bandchain.js/getting-started) section.
