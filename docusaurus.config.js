@@ -60,7 +60,7 @@ const config = {
       },
     ],
   ],
-
+  plugins: [require.resolve('docusaurus-plugin-image-zoom')],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -188,6 +188,16 @@ const config = {
         apiKey: 'fb64695755dbc69a009bc2d47a832fb0',
         indexName: 'bandchain',
         contextualSearch: false,
+      },
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)',
+        },
+        config: {
+          // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+        },
       },
     }),
 }
