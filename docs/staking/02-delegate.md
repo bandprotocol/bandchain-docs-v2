@@ -1,35 +1,60 @@
 # Delegate
 
+Participation in BandChain doesn't require you to be a validator. You delegate BAND tokens to any validator and to earn a share of the fees and rewards associated with block creation. Nevertheless, it's important to note that staking with a validator involves certain [risks](#). Make sure to familiarize yourself with the potential dangers related to validator staking.
+
 This tutorial will assist you in staking your BAND tokens easily and efficiently
 
-1. To begin, navigate to the website [cosmoscan.io](https://www.cosmoscan.io). This website is our official block explorer and is a crucial tool for interacting with the BandChain.
+### Step 0: Before you start
 
-2. Once you're on the site, ensure that you're operating on the mainnet. You can verify this by locating the network information on the top-left corner of the website interface. The mainnet is the primary network for transacting tokens.
+- Download and install the newest version of Ledger Live on your desktop machine.
+- Update your Ledger device to the newest firmware.
+- Install the latest version of the Cosmos App on your Ledger device.
+- Have some BAND on BandChain mainnet
+
+### Step 1
+
+To begin, assume that you have BAND on the BandChain, then navigate to the website [cosmoscan.io](https://www.cosmoscan.io). This website is our official block explorer and is a crucial tool for interacting with the BandChain.
+
+### Step 2
+
+Once you're on the site, make sure the url is `https://www.cosmoscan.io` and ensure that you're operating on the mainnet. You can verify this by locating the network information on the top-left corner of the website interface. The mainnet is the primary network for transacting tokens.
 
 ![check chain ID](/img/staking/chain_id.png)
 
-3. Next, you will need to connect your wallet to the website. click the button "Connect Wallet" on the right of Navbar to initiate this process.
+### Step 3
+
+Next, you will need to connect your wallet to the website. click the button "Connect Wallet" on the right of Navbar to initiate this process.
 
 ![locate connect wallet button](/img/staking/connect_wallet_button.png)
 
-4. Upon clicking the "Connect Wallet" button, a pop-up window will appear. At the moment, our website only supports wallet connections via the Ledger device utilizing the Cosmos Application. Please ensure your Ledger device is properly set up, the Cosmos application is open on your device, and it's ready for the connection process.
+### Step 4
+
+Upon clicking the "Connect Wallet" button, a pop-up window will appear. At the moment, our website only supports wallet connections via the Ledger device utilizing the Cosmos Application. Please ensure your Ledger device is properly set up, the Cosmos application is open on your device, and it's ready for the connection process.
 
 ![connect wallet modal](/img/staking/connect_modal.png)
 
-5. Once you've successfully connected your Ledger device, you'll see an account button, as shown in the image below.
+### Step 5
+
+Once you've successfully connected your Ledger device, you'll see an account button, as shown in the image below.
 
 ![account button](/img/staking/account_button.png)
 
-6. Proceed to the validators page by clicking on "Validator" located in the Navbar. or go to [Validators](https://www.cosmoscan.io/validators). Once on the validators page, you'll see with a list of all validators that you can choose to delegate your tokens to.
+### Step 6
+
+Proceed to the validators page by clicking on "Validator" located in the Navbar. or go to [Validators](https://www.cosmoscan.io/validators). Once on the validators page, you'll see with a list of all validators that you can choose to delegate your tokens to.
 
 ![validators page](/img/staking/all_validators_page.png)
 
-7. Choose a validator that you wish to delegate to. This decision should be based on various factors _TODO:_ (add details about how to evaluate and select the best validators)
-   Upon clicking on a validator, you'll be presented with specific information about them. This typically includes their identity, performance statistics, commission rates, and more.
+### Step 7
+
+Choose a validator that you wish to delegate to. This decision should be based on various factors _TODO:_ (add details about how to evaluate and select the best validators)
+Upon clicking on a validator, you'll be presented with specific information about them. This typically includes their identity, performance statistics, commission rates, and more.
 
 ![validator details page](/img/staking/validator_detail.png)
 
-8. Scroll down to the "Your Delegation Info" section. This area provides detailed information about your current and past delegations with the selected validator. You'll notice a "Delegate" button within this section – click on it to initiate the delegation process.
+### Step 8
+
+Scroll down to the "Your Delegation Info" section. This area provides detailed information about your current and past delegations with the selected validator. You'll notice a "Delegate" button within this section – click on it to initiate the delegation process.
 
 Upon clicking "Delegate," a new window will pop up. Enter the amount of BAND tokens you wish to stake in the provided field, and then click "Next."
 
@@ -50,3 +75,12 @@ To verify your transaction, navigate back to your "Account Details" page. To vie
 you'll be able to see the updated status showing that you've delegated to your chosen validator.
 
 ![your account detail page](/img/staking/account_details.png)
+
+## Next: Manage your BAND stake
+
+Once you have staked your BAND, you have 4 options to consider.
+
+- Undelegate
+- Redelegate
+- Claim Rewards
+- Reinvest
