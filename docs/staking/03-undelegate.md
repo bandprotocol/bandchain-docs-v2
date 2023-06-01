@@ -26,12 +26,12 @@ check if transaction detail is valid then click **Broadcast**
 
 ![click undelegate](/img/staking/undelegate_transaction_detail.png)
 
-now your BAND are undelegated
+Well done! Your BAND has been successfully undelegated.
 
 ![click undelegate](/img/staking/undelegate_transaction_success.png)
 
-### Step 4 — check Unbonding
+### Step 4 — check Unbonding tab
 
-in Unbonding Section. show when your BAND will available
+In the Unbonding tab, the date when your BAND will be available will be displayed.
 
 ![click undelegate](/img/staking/unbonding.png)
