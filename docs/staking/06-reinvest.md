@@ -1,3 +1,29 @@
 # Reinvest
 
-Coming Soon
+Reinvestment refers to the process of claiming your rewards and then redelegating them back to the same validator. This manual aims to provide detailed steps to guide you on how to execute this process of reinvesting.
+
+:::info
+This guide necessitates that you first familiarize yourself with the Dele[Delegate](./02-delegate.md)gate document before proceeding.
+:::
+
+### Step 1 — Select the Validator you want to redelegate
+
+navigate to your account details page. you will see the section of Delegation. then click **Reinvest** on your selected validator
+
+![click claim](/img/staking/reinvest_section.png)
+
+### Step 2 — Select the Validator you want to delegate to
+
+In the Reinvest pop-up window, you will see the amount of reward you will receive.
+
+![click next](/img/staking/reinvest_modal.png)
+
+### Step 3 — check Transaction details
+
+check if transaction detail is valid then click **Broadcast**
+
+![check transaction details](/img/staking/withdraw_transaction_detail.png)
+
+Congratulations! Your BAND has been successfully reinvest your reward
+
+![transaction success](/img/staking/undelegate_transaction_success.png)

@@ -3,7 +3,7 @@
 If you've already delegated your BAND tokens and then decide to switch validators, you have the option to **redelegate** your BAND to new validators.
 
 :::info
-this tutorial required you to read [Delegate](./02-delegate.md) first
+This guide necessitates that you first familiarize yourself with the Dele[Delegate](./02-delegate.md)gate document before proceeding.
 :::
 
 ### Step 1 — Select the Validator you want to redelegate
@@ -30,10 +30,10 @@ check if transaction detail is valid then click **Broadcast**
 
 Congratulations! Your BAND has been successfully redelegated to the new validator
 
-![click undelegate](/img/staking/undelegate_transaction_success.png)
+![check transaction details](/img/staking/undelegate_transaction_success.png)
 
 ### Step 4 — check Redelegate tab
 
 In the Redelegate tab, you can view the details of your redelegation.
 
-![click undelegate](/img/staking/redelegate_details.png)
+![transaction success](/img/staking/redelegate_details.png)

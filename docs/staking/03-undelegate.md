@@ -5,7 +5,7 @@ Once you have your BAND delegated. you undelegate to recieve back your BAND but 
 we will show you how to undelegate
 
 :::info
-this tutorial required you to read [Delegate](./02-delegate.md) first
+This guide necessitates that you first familiarize yourself with the Dele[Delegate](./02-delegate.md)gate document before proceeding.
 :::
 
 ### Step 1 — Select the Validator you want to undelegate
@@ -28,10 +28,10 @@ check if transaction detail is valid then click **Broadcast**
 
 Well done! Your BAND has been successfully undelegated.
 
-![click undelegate](/img/staking/undelegate_transaction_success.png)
+![check transaction](/img/staking/undelegate_transaction_success.png)
 
 ### Step 4 — check Unbonding tab
 
 In the Unbonding tab, the date when your BAND will be available will be displayed.
 
-![click undelegate](/img/staking/unbonding.png)
+![transaction success](/img/staking/unbonding.png)
