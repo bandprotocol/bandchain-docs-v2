@@ -15,15 +15,3 @@
 ### Q: Why I can't send my BAND after undelegate
 
 **A:** The Cosmos network has a 21 day unstaking period throughout which your tokens will not be transferable.
-
----
-
-TODO: optional
-
-### Q: How do I estimate and view my staking rewards?
-
-### Q: What is Validator Uptime?
-
-### Q: What is the Validator Fee/Commission?
-
-### Q:
