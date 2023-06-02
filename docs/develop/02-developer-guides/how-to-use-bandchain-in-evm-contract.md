@@ -14,14 +14,15 @@ As an EVM Contract developer, your responsibility isn't necessarily to author yo
 
 ### How to request data from Oracle Script
  
-Let's look at the standard Oracle Script from band in our testnet [Band Protocol's Cryptocurrency Standard Dataset](https://laozi-testnet6.cosmoscan.io/oracle-script/401)
+Let's look at the standard Oracle Script in our testnet [Band Protocol's Cryptocurrency Standard Dataset](https://laozi-testnet6.cosmoscan.io/oracle-script/401). This refers to the standard Oracle Script employed to fetch the price data of widely recognized cryptocurrencies.
 
-Then heads to the bottom section and select Make New Request
+Then heads to the bottom section and select "Make New Request"
 
-![](https://hackmd.io/_uploads/S1SQOeCrn.png)
+<img src="https://hackmd.io/_uploads/S1SQOeCrn.png" height="300">
 
 You will see a set of inputs of this Oracle Script 
-![](https://hackmd.io/_uploads/BJCsRqHLn.png)
+
+<img src="https://hackmd.io/_uploads/BJCsRqHLn.png" height="700">
 
 
 There are four basic inputs you need to know.
@@ -33,9 +34,10 @@ There are four basic inputs you need to know.
 "Minimum Source" is an input parameter that designates the requisite number of data sources for each symbol. If a symbol doesn't have sufficient data sources, an error will be triggered.
 
 You can see the list of Data Sources of this Oracle Script in the top section.
-![](https://hackmd.io/_uploads/BJ45yoSL2.png)
 
-If you are not sure what is the appropriate number, you can input 0.
+<img src="https://hackmd.io/_uploads/BJ45yoSL2.png" height="400">
+
+If you are not sure what is the appropriate number, you can input 3 as the standard.
 
 ### 3. Ask Count
 "Ask Count" is an input parameter that specifies the number of validators required to run the Oracle Script for a particular request. A higher ask count generally leads to more reliable data. Typically, this number is 16.
@@ -46,7 +48,7 @@ If you are not sure what is the appropriate number, you can input 0.
 You can try execute a request by following these steps: First, click on "Connect Wallet" in the top right corner. Then, enter any set of random words (mnemonic) - they don't need to adhere to a specific format. Following this, click on "Get 10 Testnet BAND". Finally, input the values as per the parameters outlined above and click 'Request'.
 
 After waiting for approximately 10 seconds, you should expect to see a result similar to this.
-![](https://hackmd.io/_uploads/r1l9goHU3.png)
+<img src="https://hackmd.io/_uploads/r1l9goHU3.png" height="300">
 
 ## Step 2: How to write your EVM Contract
 
@@ -54,7 +56,7 @@ Upon receiving data in your contract, it's advisable not to use it immediately d
 
 ### Bridge Contract
 
-In essence, a Bridge Contract is a smart contract facilitated by Band Protocol, designed to validate the authenticity of data received by your contract across various blockchains. A list of supported blockchains can be found [here](https://docs.bandchain.org/vrf/supported-blockchains.html).
+In essence, a Bridge Contract is a smart contract facilitated by Band Protocol, designed to validate the authenticity of data received by your contract across various blockchains. A list of supported blockchains can be found [here](/products/vrf/supported-blockchains).
 
 ### Example Contract and Function
 
@@ -84,4 +86,4 @@ You can learn more about Falcon in this [link](/docs/products/falcon/introductio
 
 ### Other library from Band
 
-Band Protocol also provides additional libraries, such as Pyband and Bandchain.js, that aid in building data-relaying programs. You can explore more about these resources on their respective pages here(link to the page in the doc v2). Alternatively, you can use Falcon as a base and add more features to it according to your requirements. We trust you will find utilizing data from our BandChain a rewarding experience.
+Band Protocol also provides additional libraries, such as Pyband and Bandchain.js, that aid in building data-relaying programs. You can explore more about these resources on their respective pages [here](/develop/developer-tools/pyband/getting-started). Alternatively, you can use Falcon as a base and add more features to it according to your requirements. We trust you will find utilizing data from our BandChain a rewarding experience.
