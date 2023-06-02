@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Oracle Modules
+# Protobuf Documentation
 
 ## oracle/v1/oracle.proto
 
