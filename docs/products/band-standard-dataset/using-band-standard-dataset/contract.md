@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# On Solidity
+# With Solidity
 
 We have implemented a new `StdReference` interface contract to allow anyone to query data from our Standard Dataset.
 
