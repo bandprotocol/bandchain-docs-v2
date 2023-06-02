@@ -7,7 +7,7 @@ The primary function of the oracles is as follows:
 1. Responding to data requests from dApps
 2. Querying data from the corresponding providers, and
 3. Reporting results back to the application.
-4. ![Oracle as the Middle Layer](../../static/img/The_BandChain_Oracle.png)
+4. ![Oracle as the Middle Layer](/img/The_BandChain_Oracle.png)
 
 BandChain Oracle stands out from other oracle solutions in four key areas:
 
@@ -20,7 +20,7 @@ BandChain Oracle stands out from other oracle solutions in four key areas:
 
 BandChain Oracle is designed with maximum redundancy in its infrastructure to ensure decentralization at both the consensus and data source level.
 
-![Decentralization](../../static/img/Decentralization.png)
+![Decentralization](/img/Decentralization.png)
 
 To achieve this, BandChain is operated by a globally distributed pool of validators whose actions can be easily monitored and verified by anyone. When a data request is made, validators are responsible for fetching the results.
 
@@ -32,7 +32,7 @@ Moreover, the entire data request flow is publicly available for viewing, verifi
 
 BandChain offers maximum customization and flexibility to its users through its data source and oracle scripts. These scripts allow users to query and compute their desired data feed with ease.
 
-![Flexibility](../../static/img/Flexibility.png)
+![Flexibility](/img/Flexibility.png)
 
 Data source scripts are custom scripts that allow users to query data from their desired sources. This data can then be fed into oracle scripts, which report back with the desired data feed.
 
@@ -49,7 +49,7 @@ BandChain is designed specifically for oracle data requests and computations, wh
 
 This design results in several benefits, such as an average block time of just 3 seconds, compared to Ethereum's 10-15 seconds and Bitcoin's 10 minutes. As a result, data request transactions are received and resolved quickly.
 
-![Scalability](../../static/img/Scalability.png)
+![Scalability](/img/Scalability.png)
 
 Furthermore, BandChain is optimized for heavy oracle computations, allowing it to offload these computations from the requester's chain.
 
@@ -61,4 +61,4 @@ With its own chain, the oracle core logic and operations do not need to be dupli
 
 In addition to its scalability, Band's oracle offers an economical approach to data requests. Users can request data only when they need to and pay the associated fees on a per-request basis, making it significantly more cost-effective than updating the price of an entire set of assets when only the latest price of one is needed.
 
-![Cost](../../static/img/Cost.png)
+![Cost](/img/Cost.png)
