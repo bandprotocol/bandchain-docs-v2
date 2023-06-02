@@ -43,3 +43,42 @@ async function exampleGetReferenceData() {
 ```
 
 For a full tutorial and more usage on BandChain.js, please refer to the [Getting Started](/develop/developer-tools/bandchain.js/getting-started) section.
+
+## PyBand
+
+```py
+
+from pyband.client import Client
+
+def main():
+    # Step 1
+    grpc_url = "<GRPC>" # ex.laozi-testnet6.bandchain.org(without https://)
+    c = Client(grpc_url)
+
+    # Step 2
+    print(c.get_reference_data(["BTC/USD", "ETH/USD"], 3, 4))
+
+if __name__ == "__main__":
+    main()
+
+```
+
+And running the code above should return a result that looks like this.
+
+```py
+[
+  ReferencePrice(
+    (pair = "BTC/USD"),
+    (rate = 34614.1),
+    (updated_at = ReferencePriceUpdated((base = 1625655764), (quote = 1625715134)))
+  ),
+  ReferencePrice(
+    (pair = "ETH/USD"),
+    (rate = 2372.53),
+    (updated_at = ReferencePriceUpdated((base = 1625655764), (quote = 1625715134)))
+  )
+]
+
+```
+
+For a full tutorial and more usage on PyBand, please refer to the [Getting Started](/develop/developer-tools/pyband/getting-started) section.

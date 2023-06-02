@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# On REST API Endpoint
+# Through a REST API Endpoint
 
 The service allows users to easily query for recent price updates via a REST API.
 
