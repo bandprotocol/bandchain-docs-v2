@@ -34,14 +34,16 @@ These slashing risks underline the importance of due diligence when choosing a v
 
 ## How to choose a validator
 
-On the Validators page, you will encounter a table that outlines various validators. This table is made up of six columns:
+On the Validators page, you will encounter a table that outlines various validators. This table is made up of 6 columns:
 
-- Column 1 Rank: Represents the sequence of validators based on the number of tokens bonded to each validator.
-- Column 2 Validator Name
-- Column 3 Voting Power: Denotes the number of tokens bonded to a particular validator.
-- Column 4 Commission: Every validator possesses the privilege to impose a commission on the rewards earned by the delegators on their behalf.
-- Column 5 Uptime: Demonstrates the proportion of blocks a validator has been active within the last 100 blocks.
-- Column 6 Oracle Status
+![validators page](/img/staking/all_validators_page.png)
+
+- Column 1 — Rank: Represents the sequence of validators based on the number of tokens bonded to each validator.
+- Column 2 — Validator: Name of validator
+- Column 3 — Voting Power: Denotes the number of tokens bonded to a particular validator.
+- Column 4 — Commission: Every validator charge commission on the rewards earned by the delegators on their behalf.
+- Column 5 — Uptime: Demonstrates the proportion of blocks a validator has been active within the last 100 blocks.
+- Column 6 — Oracle Status: shows that is this validator working as an oracle provider or not.
 
 There are three factors you should consider when choosing a validator:
 

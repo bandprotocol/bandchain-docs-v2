@@ -3,10 +3,10 @@
 Delegator will get rewards for staking. This guide is intended to provide step-by-step instructions on how to claim these staking rewards.
 
 :::info
-This guide necessitates that you first familiarize yourself with the Dele[Delegate](./02-delegate.md)gate document before proceeding.
+This guide necessitates that you first familiarize yourself with the [Delegate](./02-delegate.md) document before proceeding.
 :::
 
-### Step 1 — Select the Validator you want to redelegate
+### Step 1 — navigate account details page
 
 navigate to your account details page. you will see the section of Delegation. then click **Claim** on your selected validator
 
