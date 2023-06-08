@@ -7,23 +7,28 @@ sidebar_position: 2
 This guide serves as a brief guide on how to utilize the pricefeed module in your cosmos-sdk app.
 
 ## Prerequisites
+
 Be sure you have met the prerequisites before you following this guide.
 
 ### Operating systems
+
 - Ubuntu 22.04
 
 ### Go (for ignite and consumer chain)
+
 - 1.19.5 or higher
 
 ### Ignite CLI
+
 - 0.26.1 or higher
 
 ### Rust (for Hermes Relayer)
+
 - 1.65.0 or higher
 
 ### Installation
 
-### Installing build-essential package in Ubuntu 
+### Installing build-essential package in Ubuntu
 
 ```
 sudo apt update && sudo apt install build-essential
@@ -36,9 +41,8 @@ To create a new blockchain project with Ignite, you will need to run the followi
 ```
 ignite scaffold chain example
 ```
+
 The ignite scaffold chain command will create a new blockchain in a new directory example.
-
-
 
 ## Step 1: Replace the genesis state
 
@@ -47,12 +51,13 @@ The ignite scaffold chain command will create a new blockchain in a new director
 To expedite the testing of the pricefeed module, modify the default voting period to 40 seconds using Ignite feature to replace the genesis state by incorporating this code in `config.yml`.
 
 ```yml
-...
+
+---
 genesis:
   app_state:
     gov:
       voting_params:
-        voting_period: "40s"
+        voting_period: '40s'
 ```
 
 ### Initiate source channel and symbol requests by Ignite
@@ -92,7 +97,7 @@ require (
 )
 ```
 
-### Replace tendermint with cometbft 
+### Replace tendermint with cometbft
 
 The pricefeed module now uses the version implemented by cometbft. Therefore, to replace the tendermint version, kindly add this line in `go.mod`.
 
@@ -106,6 +111,7 @@ replace (
 Then run `go mod tidy` to update all module packages.
 
 ### Add pricefeed keeper in `app/app.go`
+
 #### Add pricefeed proposal
 
 ```go
@@ -116,7 +122,7 @@ import (
 
 func getGovProposalHandlers() []govclient.ProposalHandler {
     var govProposalHandlers []govclient.ProposalHandler
-    
+
     govProposalHandlers = append(
         ...
         pricefeedclient.ProposalHandler,
@@ -140,7 +146,7 @@ ModuleBasics = module.NewBasicManager(
 )
 ```
 
-#### Add pricefeed keeper type in `App`
+#### Add pricefeed keeper type
 
 ```go
 import (
@@ -177,17 +183,17 @@ keys := sdk.NewKVStoreKeys(
 scopedPricefeedKeeper := app.CapabilityKeeper.ScopeToModule(pricefeedtypes.ModuleName)
 app.ScopedPricefeedKeeper = scopedPricefeedKeeper
 app.PricefeedKeeper = pricefeedkeeper.NewKeeper(
-	appCodec,
-	keys[pricefeedtypes.StoreKey],
-	app.GetSubspace(pricefeedtypes.ModuleName),
-	app.IBCKeeper.ChannelKeeper,
-	app.IBCKeeper.ChannelKeeper,
-	&app.IBCKeeper.PortKeeper,
-	scopedPricefeedKeeper,
+    appCodec,
+    keys[pricefeedtypes.StoreKey],
+    app.GetSubspace(pricefeedtypes.ModuleName),
+    app.IBCKeeper.ChannelKeeper,
+    app.IBCKeeper.ChannelKeeper,
+    &app.IBCKeeper.PortKeeper,
+    scopedPricefeedKeeper,
 )
 ```
 
-#### Create pricefeed module
+#### Create new pricefeed module
 
 ```go
 import (
@@ -200,13 +206,14 @@ pricefeedIBCModule := pricefeedmodule.NewIBCModule(app.PricefeedKeeper)
 ```
 
 #### Add pricefeed module in IBC router
+
 ```go
 ibcRouter.
-	AddRoute(...).
-	AddRoute(pricefeedtypes.ModuleName, pricefeedIBCModule)
+    AddRoute(...).
+    AddRoute(pricefeedtypes.ModuleName, pricefeedIBCModule)
 ```
 
-#### Add pricefeed in governance Handler router
+#### Add pricefeed module in governance Handler router
 
 ```go
 govRouter.
@@ -214,12 +221,12 @@ govRouter.
     AddRoute(pricefeedtypes.RouterKey, pricefeedmodule.NewUpdateSymbolRequestProposalHandler(app.PricefeedKeeper))
 ```
 
-#### Add pricefeed in module manager
+#### Add pricefeed module in module manager
 
 ```go
 app.mm = module.NewManager(
-	...,
-	pricefeedModule,
+    ...,
+    pricefeedModule,
 )
 ```
 
@@ -254,23 +261,26 @@ app.sm = module.NewSimulationManager(
 
 ```go
 func initParamsKeeper(...) paramskeeper.Keeper {
-	paramsKeeper.Subspace(...)
-	paramsKeeper.Subspace(pricefeedmoduletypes.ModuleName)
+    paramsKeeper.Subspace(...)
+    paramsKeeper.Subspace(pricefeedmoduletypes.ModuleName)
 }
 ```
 
 Once you have completed the addition of the pricefeed module in the app.go file, execute the command `go mod tidy` to import and update the necessary modules.
 
 Now have completed importing the pricefeed module and can now execute the chain by running this command :tada:
+
 ```
 ignite chain serve -v
 ```
 
 ## Step 3: Setup a relayer
+
 The second step is to set up a relayer to listen and relay IBC packets between a your chain and BandChain.
 
 Here are the simple guides for setting up a relayer.
-- [Setup Hermes relayer](https://github.com/bandprotocol/oracle-consumer/blob/main/docs/setup_hermes_relayer.md) *(Recommend)*
+
+- [Setup Hermes relayer](https://github.com/bandprotocol/oracle-consumer/blob/main/docs/setup_hermes_relayer.md) _(Recommend)_
 - [Setup Go relayer](https://github.com/cosmos/relayer)
 
 ## Step 4 (optional): Open proposal for change params and update symbol requests
@@ -314,7 +324,6 @@ exampled tx gov vote 1 yes --from alice
 exampled tx gov vote 1 yes --from bob
 ```
 
-
 ### Step 4.2: Open update symbol request proposal and vote
 
 The purpose of this proposal is to request price data from BandChain at `block_interval` specified in the proposal. If the proposal is approved, the pricefeed module will retrieve the data and store the response on the consumer chain.
@@ -323,23 +332,24 @@ The purpose of this proposal is to request price data from BandChain at `block_i
 
 ```json
 {
-    "title": "Update Symbol requests",
-    "description": "Update symbol that request price from BandChain",
-    "symbol_requests": [
-        {
-            "symbol": "BTC",
-            "oracle_script_id": "396",
-            "block_interval": "40"
-        },
-        {
-            "symbol": "ETH",
-            "oracle_script_id": "396",
-            "block_interval": "40"
-        }
-    ],
-    "deposit": "10000000stake"
+  "title": "Update Symbol requests",
+  "description": "Update symbol that request price from BandChain",
+  "symbol_requests": [
+    {
+      "symbol": "BTC",
+      "oracle_script_id": "396",
+      "block_interval": "40"
+    },
+    {
+      "symbol": "ETH",
+      "oracle_script_id": "396",
+      "block_interval": "40"
+    }
+  ],
+  "deposit": "10000000stake"
 }
 ```
+
 > Note: You can also delete symbol request by set `"block_interval": "0"` on this proposal.
 
 #### Submit proposal

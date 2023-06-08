@@ -19,7 +19,11 @@ const stacks: CardItem[] = [
   {
     title: 'ReScript',
     Svg: require('@site/static/img/rescript.svg').default,
-    description: <>The core language of our CosmoScan block explorer</>,
+    description: (
+      <>
+        The core language of our <strong>CosmoScan</strong> block explorer
+      </>
+    ),
     to: 'https://rescript-lang.org/',
     target: '_blank',
   },

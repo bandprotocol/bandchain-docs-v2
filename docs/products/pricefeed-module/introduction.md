@@ -14,9 +14,10 @@ The initial step for the pricefeed module is to obtain information about the sym
 
 The Proposal submitted to update tasks for the pricefeed module consists of three components - the name of the symbol, the oracle script ID required to obtain the price, and the block interval for requesting the data every `n` block.
 
-Upon the proposal's approval, the pricefeed module will request price data from BandChain based on the `SymbolRequest` that was updated through the proposal. 
+Upon the proposal's approval, the pricefeed module will request price data from BandChain based on the `SymbolRequest` that was updated through the proposal.
 
 ## Workflow
+
 ![pricefeed](https://user-images.githubusercontent.com/13800683/233438703-c0835bcc-98ea-454f-ab87-5339dde43bc5.png)
 
 ### Request
@@ -35,9 +36,10 @@ An example of the usage of this module is provided on the [Oracle Consumer Chain
 
 ## Params
 
-The pricefeed module stores its params in state, it can be updated with governance or the address with authority. The information contained in these parameters is utilized to request data from BandChain.
+The pricefeed module stores its params in state, it can be updated with governance. The information contained in these parameters is utilized to request data from BandChain.
 
 > proto/consumer/pricefeed/params.proto
+
 ```protobuf
 message Params {
   option (gogoproto.goproto_stringer) = false;
@@ -59,9 +61,10 @@ message Params {
 
 ## Proposal
 
-The pricefeed module includes the `UpdateSymbolRequestProposal` for updating symbols that request prices from BandChain on a block-by-block basis based on `block_interval` configuration by submit the proposal on your Cosmos SDK application.
+The pricefeed module includes the `UpdateSymbolRequestProposal` for updating symbols to request price data on BandChain based on `block_interval` configuration by submitting the proposal on your Cosmos SDK application.
 
 > proto/consumer/pricefeed/pricefeed.proto
+
 ```protobuf
 message UpdateSymbolRequestProposal {
   option (gogoproto.goproto_getters) = false;
@@ -95,7 +98,7 @@ The query commands allow users to query pricefeed state.
 oracle-consumerd query pricefeed --help
 ```
 
-#### Symbol Requests 
+#### Symbol Requests
 
 The `symbol-requests` command enables users to retrieve information about all symbol requests that are save in this Cosmos SDK application.
 
@@ -146,26 +149,25 @@ Example:
 
 1. create `param_change.json` file
 
-    ```json
-    {
-      "title": "Param change for SourceChannel",
-      "description": "Proposal for change SourceChannel param in pricefeed module",
-      "changes": [
-        {
-          "subspace": "pricefeed",
-          "key": "SourceChannel",
-          "value": "channel-0"
-        }
-      ],
-      "deposit": "10000000stake"
-    }
-    ```
+   ```json
+   {
+     "title": "Param change for SourceChannel",
+     "description": "Proposal for change SourceChannel param in pricefeed module",
+     "changes": [
+       {
+         "subspace": "pricefeed",
+         "key": "SourceChannel",
+         "value": "channel-0"
+       }
+     ],
+     "deposit": "10000000stake"
+   }
+   ```
 
 2. submit the proposal
-    ```
-    oracle-consumerd tx gov submit-legacy-proposal param-change param_change.json --from alice
-    ```
-
+   ```
+   oracle-consumerd tx gov submit-legacy-proposal param-change param_change.json --from alice
+   ```
 
 #### Update symbol request proposal
 
@@ -179,31 +181,32 @@ Example:
 
 1. create `update_symbol_requests.json` file
 
-    ```json
-    {
-        "title": "Update Symbol requests",
-        "description": "Update symbol that request price from BandChain",
-        "symbol_requests": [
-            {
-                "symbol": "BTC",
-                "oracle_script_id": "396",
-                "block_interval": "40"
-            },
-            {
-                "symbol": "ETH",
-                "oracle_script_id": "396",
-                "block_interval": "40"
-            }
-        ],
-        "deposit": "10000000stake"
-    }
-    ```
-    > Note: You can also delete symbol request by set `"block_interval": "0"` on this proposal.
+   ```json
+   {
+     "title": "Update Symbol requests",
+     "description": "Update symbol that request price from BandChain",
+     "symbol_requests": [
+       {
+         "symbol": "BTC",
+         "oracle_script_id": "396",
+         "block_interval": "40"
+       },
+       {
+         "symbol": "ETH",
+         "oracle_script_id": "396",
+         "block_interval": "40"
+       }
+     ],
+     "deposit": "10000000stake"
+   }
+   ```
+
+   > Note: You can also delete symbol request by set `"block_interval": "0"` on this proposal.
 
 2. submit the proposal
-    ```
-    oracle-consumerd tx gov submit-legacy-proposal update-symbol-request update_symbol_requests.json --from alice
-    ```
+   ```
+   oracle-consumerd tx gov submit-legacy-proposal update-symbol-request update_symbol_requests.json --from alice
+   ```
 
 ### Another way to initiate source channel and symbol requests
 
@@ -214,14 +217,14 @@ genesis:
   app_state:
     pricefeed:
       params:
-          source_channel: "channel-0"
-      symbol_requests: [{"symbol": "BAND", "oracle_script_id": 396, "block_interval":  40}]
+        source_channel: 'channel-0'
+      symbol_requests: [{ 'symbol': 'BAND', 'oracle_script_id': 396, 'block_interval': 40 }]
 ```
 
 ### Learn more
 
 - cosmos-sdk
-    - [building-modules](https://docs.cosmos.network/main/building-modules/intro)
-    - [ibc-app-packets](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/7-ibc-app-packets.html)
+  - [building-modules](https://docs.cosmos.network/main/building-modules/intro)
+  - [ibc-app-packets](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/7-ibc-app-packets.html)
 - BandChain
-    - [oracle-script](https://docs.bandchain.org/custom-script/oracle-script/introduction.html)
+  - [oracle-script](https://docs.bandchain.org/custom-script/oracle-script/introduction.html)
