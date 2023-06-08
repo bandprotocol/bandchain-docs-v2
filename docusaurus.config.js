@@ -57,8 +57,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        // googleAnalytics: {
-        //   trackingID: 'UA-141789564-1',
+        // WARNING: Only active on production branch
+        // gtag: {
+        //   trackingID: 'G-DCFFR6X15E',
         //   anonymizeIP: true,
         // },
       },
