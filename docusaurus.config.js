@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Band Protocol Documentation',
+  title: 'Band Protocol',
   tagline:
     'Band Protocol is a cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts.',
   favicon: 'img/favicon.png',
@@ -69,8 +69,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/Thumbnail_Doc.png',
       docs: {
         sidebar: {
           autoCollapseCategories: true,
