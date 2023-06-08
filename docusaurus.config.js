@@ -57,6 +57,11 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        // WARNING: Only active on production branch
+        // gtag: {
+        //   trackingID: 'G-DCFFR6X15E',
+        //   anonymizeIP: true,
+        // },
       },
     ],
   ],
