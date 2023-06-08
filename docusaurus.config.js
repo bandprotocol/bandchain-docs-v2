@@ -74,6 +74,37 @@ const config = {
         anonymizeIP: true,
       },
     ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/products/band-standard-dataset/using-band-standard-dataset/contract',
+            from: ['/band-standard-dataset/using-band-dataset/using-band-dataset-evm.html'],
+          },
+          {
+            to: '/products/band-standard-dataset/using-band-standard-dataset/client',
+            from: ['/band-standard-dataset/using-band-dataset/using-band-dataset-web.html'],
+          },
+          {
+            to: '/products/pricefeed-module/introduction',
+            from: ['/integration-tools/pricefeed-module/introduction.html'],
+          },
+          {
+            to: '/products/vrf/supported-blockchains',
+            from: ['/vrf/supported-blockchains.html'],
+          },
+          {
+            to: '/node-validators/run-node/joining-testnet/getting-started',
+            from: ['/joining-networks/joining-testnet.html'],
+          },
+          {
+            to: '/node-validators/run-node/joining-mainnet/getting-started',
+            from: ['/joining-networks/joining-mainnet.html'],
+          },
+        ],
+      },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
