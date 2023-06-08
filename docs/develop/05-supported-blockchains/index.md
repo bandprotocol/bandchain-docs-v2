@@ -1,15 +1,14 @@
 # Supported Blockchains
 
+:::caution
+
+- We recommend experimenting with using our solution on a test network first before proceeding to mainnet.
+- Please ONLY use the proxy contract as in the case that the base contract is updated, the proxy contract will always
+  point to the correct base contract and show the most updated price feeds.
+
+:::
+
 Currently, our `StdReferenceProxy` smart contracts are available on the following networks:
-
-::: warning
-We recommend experimenting with using our solution on a test network first before proceeding to mainnet.
-:::
-
-::: warning
-Please ONLY use the proxy contract as in the case that the base contract is updated, the proxy contract will always
-point to the correct base contract and show the most updated price feeds.
-:::
 
 ## Testnets
 
