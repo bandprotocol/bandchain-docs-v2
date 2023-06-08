@@ -1,41 +1,25 @@
-# Website
+<p>&nbsp;</p>
+<p align="center">
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+<img src="bandprotocol_logo.svg" width=500>
 
-### Installation
+</p>
 
-```
-$ yarn
-```
+<p align="center">
+BandChain - Decentralized Data Delivery Network<br/><br/>
+</p>
 
-### Local Development
+## 🤔 What is BandChain?
 
-```
-$ yarn start
-```
+BandChain is a **cross-chain data oracle platform** that aggregates and connects real-world data and APIs to smart contracts. It is designed to be **compatible with most smart contract and blockchain development frameworks**. It does the heavy lifting jobs of pulling data from external sources, aggregating them, and packaging them into the format that’s easy to use and verified efficiently across multiple blockchains.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Band's flexible Oracle design allows developers to **query any data** including real-world events, sports, weather, random numbers and more. Developers can create custom-made oracles using WebAssembly to connect smart contracts with traditional web APIs within minutes.
 
-### Build
+## 💬 Community
 
-```
-$ yarn build
-```
+- [Official Website](https://bandprotocol.com)
+- [Telegram](https://100.band/tg)
+- [Developer Discord](https://100x.band/discord)
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+For updates on the Band Protocol team's activities follow us on the [Band Protocol Twitter](https://twitter.com/bandprotocol) account.
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

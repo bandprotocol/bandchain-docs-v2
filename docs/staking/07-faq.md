@@ -14,4 +14,4 @@
 
 ### Q: Why I can't send my BAND after undelegate
 
-**A:** The Cosmos network has a 21 day unstaking period throughout which your tokens will not be transferable.
+**A:** The Cosmos network has a 21 day unstaking period throughout which your tokens will not be transferable. 
