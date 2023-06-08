@@ -1,6 +1,6 @@
 # Undelegate
 
-Once you have your BAND delegated. you undelegate to recieve back your BAND but there are 21 days unbonding period before that BAND amount are available
+Once you delegate your BAND, you can later undelegate to receive your BAND back. However, there is a 21-day unbonding period before the BAND amount becomes available.
 
 we will show you how to undelegate
 
@@ -10,17 +10,17 @@ This guide necessitates that you first familiarize yourself with the [Delegate](
 
 ### Step 1 — Select the Validator you want to undelegate
 
-navigate to your account details page. you will see the section of Delegation. then click **Undelegate** on your selected validator
+Navigate to your account details page. you will see the Delegation section. then click **Undelegate** on your selected validator
 
 ![click undelegate](/img/staking/undelegate_section.png)
 
-### Step 2 — enter BAND amount
+### Step 2 — Enter BAND amount
 
 Undelegate pop-up window will be shown. enter BAND amount that you want to undelegate and click **Next**
 
 ![click undelegate](/img/staking/undelegate_modal.png)
 
-### Step 3 — check Transaction details
+### Step 3 — Check Transaction details
 
 check if transaction detail is valid then click **Broadcast**
 
@@ -30,7 +30,7 @@ Well done! Your BAND has been successfully undelegated.
 
 ![check transaction](/img/staking/undelegate_transaction_success.png)
 
-### Step 4 — check Unbonding tab
+### Step 4 — Check Unbonding tab
 
 In the Unbonding tab, the date when your BAND will be available will be displayed.
 

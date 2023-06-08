@@ -6,7 +6,7 @@ Delegator will get rewards for staking. This guide is intended to provide step-b
 This guide necessitates that you first familiarize yourself with the [Delegate](./02-delegate.md) document before proceeding.
 :::
 
-### Step 1 — navigate account details page
+### Step 1 — Navigate account details page
 
 navigate to your account details page. you will see the section of Delegation. then click **Claim** on your selected validator
 
@@ -18,7 +18,7 @@ In the Withdraw Reward pop-up window, you will see the amount of reward you will
 
 ![click next](/img/staking/withdraw_modal.png)
 
-### Step 3 — check Transaction details
+### Step 3 — Check Transaction details
 
 check if transaction detail is valid then click **Broadcast**
 

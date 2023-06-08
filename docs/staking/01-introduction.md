@@ -26,7 +26,7 @@ What's critical to understand is that the penalty isn't limited to validators. I
 
 A robust and reliable network necessitates active and consistent participation from validators. Validators in the Band Protocol have a duty to be online and operational to validate transactions and add new blocks to the blockchain.
 
-If a validator is offline and misses a certain number of blocks, in this case, 30,000 blocks, they face a downtime penalty. A slashing penalty of 0.01% is imposed, and the validator is put into "jail." This means they are prevented from signing any further blocks until they can prove they're back online and operational.
+If a validator is offline and misses a certain number of blocks, in this case, 30,000 blocks, they face a downtime penalty. A slashing penalty of 0.01% is imposed, and the validator is put into **jail**. This means they are prevented from signing any further blocks until they can prove they're back online and operational.
 
 Again, if you've delegated your tokens to a validator and they're jailed due to downtime, your staked tokens also face the 0.01% slashing penalty.
 
@@ -38,17 +38,17 @@ On the Validators page, you will encounter a table that outlines various validat
 
 ![validators page](/img/staking/all_validators_page.png)
 
-- Column 1 — Rank: Represents the sequence of validators based on the number of tokens bonded to each validator.
-- Column 2 — Validator: Name of validator
-- Column 3 — Voting Power: Denotes the number of tokens bonded to a particular validator.
-- Column 4 — Commission: Every validator charge commission on the rewards earned by the delegators on their behalf.
-- Column 5 — Uptime: Demonstrates the proportion of blocks a validator has been active within the last 100 blocks.
-- Column 6 — Oracle Status: shows that is this validator working as an oracle provider or not.
+- **Column 1 — Rank:** Represents the sequence of validators based on the number of tokens bonded to each validator.
+- **Column 2 — Validator:** Name of validator
+- **Column 3 — Voting Power:** Denotes the number of tokens bonded to a particular validator.
+- **Column 4 — Commission:** Every validator charge commission on the rewards earned by the delegators on their behalf.
+- **Column 5 — Uptime:** Demonstrates the proportion of blocks a validator has been active within the last 100 blocks.
+- **Column 6 — Oracle Status:** shows that is this validator working as an oracle provider or not.
 
 There are three factors you should consider when choosing a validator:
 
-1. Voting Power: It's critical to distribute Voting Power across all validators for network security. You can contribute to strengthening the BandChain network by choosing validators with lower voting power.
-2. Commission: A lower commission implies that you'll retain more rewards.
-3. Uptime: As we discussed earlier in the Staking Risks section, validators with lower uptime are at a greater risk of getting slashed.
+1. **Voting Power:** It's critical to distribute Voting Power across all validators for network security. You can contribute to strengthening the BandChain network by choosing validators with lower voting power.
+2. **Commission:** A lower commission implies that you'll retain more rewards.
+3. **Uptime:** As we discussed earlier in the Staking Risks section, validators with lower uptime are at a greater risk of getting slashed.
 
 In conclusion, the decision on which validator to stake with requires careful consideration of these factors.

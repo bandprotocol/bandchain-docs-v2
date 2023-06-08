@@ -6,7 +6,7 @@ Reinvestment refers to the process of claiming your rewards and then redelegatin
 This guide necessitates that you first familiarize yourself with the [Delegate](./02-delegate.md) document before proceeding.
 :::
 
-### Step 1 — navigate account details page
+### Step 1 — Navigate account details page
 
 navigate to your account details page. you will see the section of Delegation. then click **Reinvest** on your selected validator
 
@@ -18,7 +18,7 @@ In the Reinvest pop-up window, you will see the amount of reward you will receiv
 
 ![click next](/img/staking/reinvest_modal.png)
 
-### Step 3 — check Transaction details
+### Step 3 — Check Transaction details
 
 check if transaction detail is valid then click **Broadcast**
 

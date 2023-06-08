@@ -22,9 +22,9 @@ and Enter BAND amount you want to redalegate to and click Next to the next step
 
 ![enter redelegate amount](/img/staking/redelegate_enter_amount.png)
 
-### Step 3 — check Transaction details
+### Step 3 — Check Transaction details
 
-check if transaction detail is valid then click **Broadcast**
+Check if transaction detail is valid then click **Broadcast**
 
 ![click undelegate](/img/staking/redelegate_transaction_detail.png)
 
@@ -32,7 +32,7 @@ Congratulations! Your BAND has been successfully redelegated to the new validato
 
 ![check transaction details](/img/staking/undelegate_transaction_success.png)
 
-### Step 4 — check Redelegate tab
+### Step 4 — Check Redelegate tab
 
 In the Redelegate tab, you can view the details of your redelegation.
 

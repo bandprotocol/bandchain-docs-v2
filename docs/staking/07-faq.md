@@ -1,8 +1,8 @@
 # Staking FAQ
 
-### Q: Where can I see current APY
+### Q: Where can I see current APR
 
-**A:** you can see it in [cosmoscan Homepage](https://www.cosmoscan.io/)
+**A:** you can see it in [Cosmoscan](https://www.cosmoscan.io/)
 
 ### Q: Are there any auto cliam reward or auto-compound mechanism
 
