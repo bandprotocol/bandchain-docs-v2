@@ -57,15 +57,24 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        // WARNING: Only active on production branch
-        gtag: {
-          trackingID: 'G-DCFFR6X15E',
-          anonymizeIP: true,
-        },
+        // gtag: {
+        //   trackingID: 'G-DCFFR6X15E',
+        //   anonymizeIP: true,
+        // },
       },
     ],
   ],
-  plugins: [require.resolve('docusaurus-plugin-image-zoom')],
+  plugins: [
+    require.resolve('docusaurus-plugin-image-zoom'),
+    // only enabled on production
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-DCFFR6X15E',
+        anonymizeIP: true,
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
