@@ -18,8 +18,8 @@ Each validator will have a certain amount of BAND tokens bonded to them. The sou
 
 There are two networks you can join.If this is your initial experience operating a validator on BandChain, we advise you to begin by running a node on the testnet.
 
-- [Joining Mainnet](./01-run-node/01-joining-mainnet/01-getting-started.md)
-- [Joining Testnet](./01-run-node/02-joining-testnet/01-getting-started.md)
+- [Joining Mainnet](./02-run-node/01-joining-mainnet/01-getting-started.md)
+- [Joining Testnet](./02-run-node/02-joining-testnet/01-getting-started.md)
 
 An node is simply any computer running the software needed to connect with the BandChain network. Nodes connect with one another to send information back and forth to validate transactions and store data about the state of the blockchain.
 
