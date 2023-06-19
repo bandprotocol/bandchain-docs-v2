@@ -29,8 +29,6 @@ Fees generally have to be paid by the sender of the message.
 
 Meanwhile, each block validator can subjectively establish the minimum gas fee that must be reached for them to process the transaction and choose whatever transactions it wants to include in the block that it is proposing, as long as the total gas limit is not exceeded.
 
-During periods when there is a high volume of transactions waiting to be processed, a bidding-like scenario will occur in which senders compete to have their transaction included in the upcoming block. They do this by proposing a higher fee than other senders. Note that all pending transactions will eventually be processed, regardless of the fee amount proposed by the sender. The amount of gas the sender is proposing to pay only determines the likelihood that their transaction will be processed first.
-
 ## Gas Estimation
 
 This section we will compare gas usage on each message type to compare how many fee that user need to pay to do these actions.
