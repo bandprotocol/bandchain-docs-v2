@@ -2,8 +2,8 @@
 
 Oracle WebAssembly, or Owasm for short, is Band Protocol's Domain Specific Language (DSL) on top of the Rust programing language for writing [oracle scripts](/develop/custom-scripts/oracle-script/introduction) to be used in the BandChain ecosystem. The Owasm library consists of two primary modules: `owasm/oei` and `owasm/ext`.
 
-- **Owasm/OEI** - The OEI modules defines a set of functions that are part of the Owasm Oracle Environment Interface. These functions are then accessible to an oracle script during its execution. The complete list of functions and implementation can be found [here](https://github.com/bandprotocol/owasm/blob/master/src/oei/mod.rs).
-- **Owasm/Ext** - The Owasm extension module provides a convenient way to write oracle scripts that connect to various public APIs. Examples of these are functions to calculate the mean, median, and majority values from the validator's reported results, which can be used during the aggregation phase of an oracle script. The full list of functions and its implementation can be found [here](https://github.com/bandprotocol/owasm/blob/master/src/ext/mod.rs).
+- **Owasm/OEI** - The OEI modules defines a set of functions that are part of the Owasm Oracle Environment Interface. These functions are then accessible to an oracle script during its execution. The complete list of functions and implementation can be found [here](https://github.com/bandprotocol/owasm/blob/master/packages/kit/src/oei/mod.rs).
+- **Owasm/Ext** - The Owasm extension module provides a convenient way to write oracle scripts that connect to various public APIs. Examples of these are functions to calculate the mean, median, and majority values from the validator's reported results, which can be used during the aggregation phase of an oracle script. The full list of functions and its implementation can be found [here](https://github.com/bandprotocol/owasm/blob/master/packages/kit/src/ext/mod.rs).
 
 ## Usage
 
@@ -44,7 +44,7 @@ The script starts off by defining the input and output structs. In this case, th
 
 Once the structs and types of both input and output have been determined, we move on to defining the [preparation](#preparation-phase) and [execution](#execution-phase) phases of the oracle script, defined by `prepare_impl` and `execute_impl`, respectively.
 
-In order to call these functions, we need to pass appriopriate input values and make the function calls. To do so, oracle script writer can use our macros defined in [`macros.rs`](https://github.com/bandprotocol/owasm/blob/master/src/macros.rs), also shown below. The aim of these macros is to reduce the load of the script writer by handling the work of retrieving the calldata, deserializing it, and using it to construct the appropriate input struct for them.
+In order to call these functions, we need to pass appriopriate input values and make the function calls. To do so, oracle script writer can use our macros defined in [`macros.rs`](https://github.com/bandprotocol/owasm/blob/master/packages/kit/src/macros.rs), also shown below. The aim of these macros is to reduce the load of the script writer by handling the work of retrieving the calldata, deserializing it, and using it to construct the appropriate input struct for them.
 
 ```rust
 #[macro_export]

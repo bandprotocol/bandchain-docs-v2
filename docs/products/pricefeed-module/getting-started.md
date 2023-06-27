@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Getting started
 
-This guide serves as a brief guide on how to utilize the pricefeed module in your cosmos-sdk app.
+This guide serves as a brief guide on how to utilize the pricefeed module in your Cosmos SDK app.
 
 ## Prerequisites
 
-Be sure you have met the prerequisites before you following this guide.
+Be sure you have met the prerequisites before you follow this guide.
 
 ### Operating systems
 
@@ -51,8 +51,7 @@ The ignite scaffold chain command will create a new blockchain in a new director
 To expedite the testing of the pricefeed module, modify the default voting period to 40 seconds using Ignite feature to replace the genesis state by incorporating this code in `config.yml`.
 
 ```yml
-
----
+...
 genesis:
   app_state:
     gov:
@@ -77,14 +76,14 @@ genesis:
 
 ## Step 2: Import pricefeed module to your cosmos app
 
-### Edit cosmos-sdk and ibc-go version
+### Edit Cosmos SDK and IBC-go version
 
-To ensure compatibility with the pricefeed module, kindly update the cosmos-sdk version to `v0.46.12`.
+To ensure compatibility with the pricefeed module, kindly update the Cosmos SDK version to `v0.46.12`.
 
 ```go
 require (
     ...
-    github.com/cosmos/cosmos-sdk v0.46.12
+    github.com/cosmos/Cosmos SDK v0.46.12
 )
 ```
 
@@ -97,9 +96,9 @@ require (
 )
 ```
 
-### Replace tendermint with cometbft
+### Replace Tendermint with CometBFT
 
-The pricefeed module now uses the version implemented by cometbft. Therefore, to replace the tendermint version, kindly add this line in `go.mod`.
+The pricefeed module now uses the version implemented by CometBFT. Therefore, to replace the Tendermint version, kindly add this line in `go.mod`.
 
 ```
 replace (
@@ -177,7 +176,7 @@ keys := sdk.NewKVStoreKeys(
 )
 ```
 
-#### Create new pricefeed keeper
+#### Create a new pricefeed keeper
 
 ```go
 scopedPricefeedKeeper := app.CapabilityKeeper.ScopeToModule(pricefeedtypes.ModuleName)
@@ -193,7 +192,7 @@ app.PricefeedKeeper = pricefeedkeeper.NewKeeper(
 )
 ```
 
-#### Create new pricefeed module
+#### Create a new pricefeed module
 
 ```go
 import (
@@ -221,7 +220,7 @@ govRouter.
     AddRoute(pricefeedtypes.RouterKey, pricefeedmodule.NewUpdateSymbolRequestProposalHandler(app.PricefeedKeeper))
 ```
 
-#### Add pricefeed module in module manager
+#### Add pricefeed module in the module manager
 
 ```go
 app.mm = module.NewManager(
@@ -276,7 +275,7 @@ ignite chain serve -v
 
 ## Step 3: Setup a relayer
 
-The second step is to set up a relayer to listen and relay IBC packets between a your chain and BandChain.
+The second step is to set up a relayer to listen and relay IBC packets between your chain and BandChain.
 
 Here are the simple guides for setting up a relayer.
 
@@ -285,11 +284,11 @@ Here are the simple guides for setting up a relayer.
 
 ## Step 4 (optional): Open proposal for change params and update symbol requests
 
-Since you have already configured the symbol requests and source-channel in the `config.yml` file during the [step 1](#initiate-source-channel-and-symbol-requests-by-ignite) , you may skip this particular step.
+Since you have already configured the symbol requests and source channel in the `config.yml` file during the [step 1](#initiate-source-channel-and-symbol-requests-by-ignite) , you may skip this particular step.
 
 ### Step 4.1 Open source channel param change proposal and vote
 
-The current default value for the source channel is `[not_set]`. If you wish to obtain BandChain data through IBC, you will need to open the proposal to change the source channel param to your own source channel. An example of how to open parameter change proposal is provided below.
+The current default value for the source channel is `[not_set]`. If you wish to obtain BandChain data through IBC, you will need to open the proposal to change the source channel param to your own source channel. An example of how to open a parameter change proposal is provided below.
 
 #### create param-change-proposal.json
 
@@ -374,7 +373,7 @@ exampled tx gov vote 2 yes --from bob
 exampled query gov proposals
 ```
 
-### Query latest price that got from BandChain
+### Query the latest price that got from BandChain
 
 Once the proposal has been approved, the pricefeed module will query BTC and ETH from BandChain every 40 blocks on your chain, and you can view the latest price by executing this command.
 
