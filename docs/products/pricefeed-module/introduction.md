@@ -4,15 +4,15 @@ sidebar_position: 1
 
 # Introduction
 
-The [cosmos-sdk](https://docs.cosmos.network/main/intro/overview) is presently the most widely utilized framework for developing blockchain applications. A crucial necessity for such apps is an oracle. As decentralized applications (dApps) rely heavily on real-world data, ensuring the accuracy of this data holds significant importance.
+The [Cosmos SDK](https://docs.cosmos.network/main/intro/overview) is presently the most widely utilized framework for developing blockchain applications. A crucial necessity for such apps is an oracle. As decentralized applications (dApps) rely heavily on real-world data, ensuring the accuracy of this data holds significant importance.
 
-It would be advantageous for your cosmos SDK app to possess an built-in oracle that obtains data from BandChain via IBC. By importing the pricefeed module implemented by Band Protocol.
+It would be advantageous for your Cosmos SDK app to possess a built-in Oracle that obtains data from BandChain via IBC. By importing the pricefeed module implemented by Band Protocol.
 
 ## Proposal
 
 The initial step for the pricefeed module is to obtain information about the symbols that require price data from BandChain on every `n` block. This is accomplished by submitting the `UpdateSymbolRequest` Proposal.
 
-The Proposal submitted to update tasks for the pricefeed module consists of three components - the name of the symbol, the oracle script ID required to obtain the price, and the block interval for requesting the data every `n` block.
+The Proposal submitted to update tasks for the pricefeed module consists of three components - the name of the symbol, the Oracle script ID required to obtain the price, and the block interval for requesting the data every `n` blocks.
 
 Upon the proposal's approval, the pricefeed module will request price data from BandChain based on the `SymbolRequest` that was updated through the proposal.
 
@@ -24,9 +24,9 @@ Upon the proposal's approval, the pricefeed module will request price data from 
 
 At a high level, the workflow will be as follows. First, the pricefeed module creates an IBC packet to request data from BandChain. Then, relayers will pick up the IBC packet and relay it on BandChain.
 
-After BandChain processes the request, it will send an acknowledgement message along with `request_id` back. And, when the result of the request is finalized, BandChain will send a new IBC packet that contains the final data back. Relayers will listen and pick up those packets and relay them to your cosmos sdk app.
+After BandChain processes the request, it will send an acknowledgement message along with `request_id` back. And, when the result of the request is finalized, BandChain will send a new IBC packet that contains the final data back. Relayers will listen and pick up those packets and relay them to your Cosmos SDK app.
 
-After this stage, the cosmos-sdk app can safely use the data obtained from BandChain in its application at every `n` block interval. If the cosmos-sdk app requires additional data, it can submit an update symbols request proposal at any time.
+After this stage, the Cosmos SDK app can safely use the data obtained from BandChain in its application at every `n` blocks interval. If the Cosmos SDK app requires additional data, it can submit an update symbols request proposal at any time.
 
 ### pricefeed
 
@@ -36,7 +36,7 @@ An example of the usage of this module is provided on the [Oracle Consumer Chain
 
 ## Params
 
-The pricefeed module stores its params in state, it can be updated with governance. The information contained in these parameters is utilized to request data from BandChain.
+The pricefeed module stores its params in the state, it can be updated with governance. The information contained in these parameters is utilized to request data from BandChain.
 
 > proto/consumer/pricefeed/params.proto
 
@@ -54,7 +54,7 @@ message Params {
   string source_channel = 8;
   repeated cosmos.base.v1beta1.Coin fee_limit = 9 [
     (gogoproto.nullable) = false,
-    (gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"
+    (gogoproto.castrepeated) = "github.com/cosmos/Cosmos SDK/types.Coins"
   ];
 }
 ```
@@ -82,7 +82,7 @@ message SymbolRequest {
 }
 ```
 
-The example of submit and vote the proposal is demonstrated in the CLI section.
+The example of submitting and voting on the proposal is demonstrated in the CLI section.
 
 ## CLI
 
@@ -100,7 +100,7 @@ oracle-consumerd query pricefeed --help
 
 #### Symbol Requests
 
-The `symbol-requests` command enables users to retrieve information about all symbol requests that are save in this Cosmos SDK application.
+The `symbol-requests` command enables users to retrieve information about all symbol requests that are saved in this Cosmos SDK application.
 
 ```
 oracle-consumerd query pricefeed symbol-requests
@@ -108,7 +108,7 @@ oracle-consumerd query pricefeed symbol-requests
 
 #### Price
 
-The `price` command allows users to query price data by symbol.
+The `price` command allows users to query price data by the symbol.
 
 ```
 oracle-consumerd query pricefeed price [symbol]
@@ -131,7 +131,7 @@ price:
 
 ### Proposal
 
-The `tx gov submit-legacy-proposal` commands allow users to submit proposal on your cosmos sdk app.
+The `tx gov submit-legacy-proposal` commands allow users to submit a proposal on your Cosmos SDK app.
 
 ```
 oracle-consumerd tx gov submit-legacy-proposal -h
@@ -139,7 +139,7 @@ oracle-consumerd tx gov submit-legacy-proposal -h
 
 #### Source Channel param change proposal
 
-In order to acquire BandChain data through the IBC, it is imperative to update the `source-channel` parameter by submitting a proposal for the change that reflects your own source channel.
+To acquire BandChain data through the IBC, it is imperative to update the `source-channel` parameter by submitting a proposal for the change that reflects your source channel.
 
 ```
 oracle-consumerd tx gov submit-legacy-proposal param-change [proposal-file]
@@ -171,7 +171,7 @@ Example:
 
 #### Update symbol request proposal
 
-The `update-symbol-request` command allows users to update symbol request to specify which symbols they desire to obtain price data from BandChain.
+The `update-symbol-request` command allows users to update symbol requests to specify which symbols they desire to obtain price data from BandChain.
 
 ```
 oracle-consumerd tx gov submit-legacy-proposal update-symbol-request [proposal-file]
@@ -223,8 +223,8 @@ genesis:
 
 ### Learn more
 
-- cosmos-sdk
-  - [building-modules](https://docs.cosmos.network/main/building-modules/intro)
-  - [ibc-app-packets](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/7-ibc-app-packets.html)
+- Cosmos SDK
+  - [building-modules](https://docs.cosmos.network/v0.46/building-modules/intro.html)
+  - [ibc-app-packets](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/5-ibc-app-packets.html)
 - BandChain
-  - [oracle-script](https://docs.bandchain.org/custom-script/oracle-script/introduction.html)
+  - [oracle-script](https://docs.bandchain.org/develop/custom-scripts/oracle-script/introduction)
